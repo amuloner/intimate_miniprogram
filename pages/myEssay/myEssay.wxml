@@ -1,0 +1,73 @@
+<view class="essay_nav">
+  <view class="nav_title">
+    <view wx:for="{{tabs}}"
+    wx:key="id"
+    class="nav_item"
+    bindtap="handleItemTap"
+    data-index="{{index}}"
+    >
+    <text class="{{item.isActive?'active':''}}">{{item.title}}</text>
+    </view>
+  </view>
+</view>
+<block wx:if="{{status <= 1}}">
+    <scroll-view scroll-y>
+      <view class="essay_content">
+        <view 
+          class="essay_item"
+          wx:for="{{essayList}}"
+          wx:key="id"
+          bind:tap="toEssayDetail"
+          data-index="{{index}}"
+          >
+          <view>
+            <view class="essay_item_left">
+              <image src="{{url+item.smallImg}}" model="aspectFill" />
+            </view>
+            <view class="essay_item_right">
+              <view class="essay_title">{{item.title}}</view>
+              <view class="essay_detail">
+                <view class="essay_author">作者：{{item.author}}</view>
+                <view class="essay_likes">{{item.essayLikes}}<icon class="iconfont icon-dianzan"></icon></view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+</block>
+<block wx:else>
+  <!-- 提问 -->
+  <view class="ask_container">
+    <view class="essay_img">
+        <view class="img_left">封面</view>
+        <view class="img_right">
+            <image src="{{essayImgUrl}}" mode="aspectFill" bind:tap="chooseEssayImg"/>
+        </view>
+    </view>
+    <view class="ask_page">
+      <form catchsubmit="formSubmit" catchreset="formReset">
+        <view class="titleInpt">
+          <input 
+            name="title" 
+            placeholder="标题（5-25字符）" 
+            maxlength="25"
+            value="{{title}}"
+            />
+        </view>
+        <view class="contentInput">
+          <textarea
+           name="content" 
+           placeholder="分享你的文章..."
+           value="{{content}}"
+           maxlength="-1"
+           />
+        </view>
+        <view class="ask_btn">
+          <button type="primary" formType="submit">发布</button>
+          <button formType="reset">重置</button>
+        </view>
+      </form>
+    </view>
+  </view>
+</block>

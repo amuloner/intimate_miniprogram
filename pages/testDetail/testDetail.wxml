@@ -1,0 +1,71 @@
+<view class="page">
+  <view class="test_title">{{testItem.title}}</view>
+  <view class="test_info" wx:if="{{step==1}}">
+    <view class="test_direction">
+      <text>{{testItem.direction}}</text>
+    </view>
+    <view class="test_btn">
+      <button bindtap="onbtntesting">开始测试</button>
+    </view>
+  </view>
+  <view class="test_doing" wx:if="{{step==2}}">
+    <view class="test_ques">
+      <!-- 显示进度条 -->
+      <view class="progress">
+        <progress 
+          percent="{{progress}}"
+          stroke-width="4"
+          />
+      </view>
+      <view class="item">
+        <view class="section">
+          <view class="section-title"> {{currentIndex}}、{{currentQues.title}}</view>
+          <view class="section-cells">
+            <radio-group>
+              <view 
+                class="section-cell" 
+                wx:for="{{answerList[currentIndex - 1]}}" 
+                wx:key="id">
+                <view class="section-cell-left">
+                  <view>{{selection[index]}}</view>
+                  <view class="left__bd">{{item.direction}}</view>
+                </view>
+                <view class="section-cell-right">
+                  <radio
+                    bindtap="onradioChange" 
+                    data-sel="{{item}}" 
+                    checked="{{selList[currentIndex - 1].id === item.id ? true : false}}"
+                    value="{{item.score}}"
+                    color="#ffa500"
+                    style="transform: scale(0.8)"
+                    />
+                </view>
+              </view>
+            </radio-group>
+          </view>
+          <view class="section-preBtn">
+            <block wx:if="{{currentIndex > 1 && !isFinish}}">
+              <button class="preBtn" bind:tap="onbtnpre">上一题</button>
+            </block>
+            <block wx:elif="{{isFinish}}">
+              <button bind:tap="onbtnpre">上一题</button>
+              <button type="primary" bindtap="onbtnCom">提交</button>
+            </block>
+          </view>
+        </view>
+      </view>
+      <view class="footer">{{currentIndex}}/{{totalIndex}}</view>
+    </view>
+  </view>
+  <view class="test_result" wx:if="{{step==3}}">
+  <!-- 一般选择类测评前面两步可通用， 但报告展示会各不相同故分开展示 -->
+    <view>
+      <view>
+        <view>您的得分是:</view>
+        <view class="myScore">{{myNature.score}}</view>
+        <view>人群平均分是：<text class="avgScore">{{myNature.avg}}</text></view>
+      </view>
+      <view>{{myNature.message}}</view>
+    </view>
+  </view>
+</view>

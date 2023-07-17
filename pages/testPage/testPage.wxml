@@ -1,0 +1,195 @@
+<myHearder></myHearder>
+<!-- 内容 -->
+<view class="search_content">
+    <!-- 左侧列表 -->
+    <scroll-view scroll-y class="left_menu">
+        <view class="menu_item {{index===currentIndex?'active':''}}"
+        wx:for="{{leftMenuList}}"
+        wx:key="*this"
+        bind:tap="handleItemTap"
+        data-index="{{index}}"
+        data-name="{{leftMenuList[index]}}"
+        ><text>{{item}}</text></view>
+    </scroll-view>
+    <!-- 右侧列表 -->
+    <view class="right_content">
+        <view class="right_nav">
+            <view class="nav_left">排序</view>
+            <view class="nav_right">
+                <mySelect propArray="{{selectArray}}" bind:orderItemChange="orderItemChange"></mySelect>
+            </view>
+        </view>
+        <scroll-view bindscrolltolower="getNewData" lower-threshold="80" scroll-top="{{scrollTop}}" scroll-y class="right_menu">
+            <view class="listContent">
+                <view 
+                    class="right_item"
+                    wx:for="{{testList}}"
+                    wx:key="id"
+                    data-index="{{index}}"
+                    bind:tap="toTestDetail"
+                    >
+                    <view class="evaluation_item">
+                        <view class="item_left">
+                            <view class="item_left_top">
+                                <view class="item_title">{{item.title}}</view>
+                                <view class="item_text">{{item.sub_title}}</view>
+                            </view>
+                            <view class="item_left_bottom">
+                                <view class="item_likes">好评度：9000</view>
+                                <view class="item_userNum">xxx人已测</view>
+                            </view>
+                        </view>
+                        <view class="item_right">
+                            <view class="item_label">{{item.label}}</view>
+                            <image src="{{url+item.image}}" mode="aspectFill"/>      
+                        </view>
+                    </view>
+                </view>
+                <!-- <view class="right_item">
+                    <view class="evaluation_item">
+                        <view class="item_left">
+                            <view class="item_left_top">
+                                <view class="item_title">测测你的抑郁有多深？</view>
+                                <view class="item_text">抑郁测试[专业版]</view>
+                            </view>
+                            <view class="item_left_bottom">
+                                <view class="item_likes">好评度：9000</view>
+                                <view class="item_userNum">xxx人已测</view>
+                            </view>
+                        </view>
+                        <view class="item_right">
+                            <view class="item_label">性格</view>
+                            <image src="../../images/006.jpg" mode="aspectFill"/>      
+                        </view>
+                    </view>
+                </view>
+                <view class="right_item">
+                    <view class="evaluation_item">
+                        <view class="item_left">
+                            <view class="item_left_top">
+                                <view class="item_title">测测你的抑郁有多深？</view>
+                                <view class="item_text">抑郁测试[专业版]</view>
+                            </view>
+                            <view class="item_left_bottom">
+                                <view class="item_likes">好评度：9000</view>
+                                <view class="item_userNum">xxx人已测</view>
+                            </view>
+                        </view>
+                        <view class="item_right">
+                            <view class="item_label">性格</view>
+                            <image src="../../images/006.jpg" mode="aspectFill"/>      
+                        </view>
+                    </view>
+                </view>
+                <view class="right_item">
+                    <view class="evaluation_item">
+                        <view class="item_left">
+                            <view class="item_left_top">
+                                <view class="item_title">测测你的抑郁有多深？</view>
+                                <view class="item_text">抑郁测试[专业版]</view>
+                            </view>
+                            <view class="item_left_bottom">
+                                <view class="item_likes">好评度：9000</view>
+                                <view class="item_userNum">xxx人已测</view>
+                            </view>
+                        </view>
+                        <view class="item_right">
+                            <view class="item_label">性格</view>
+                            <image src="../../images/006.jpg" mode="aspectFill"/>      
+                        </view>
+                    </view>
+                </view>
+                <view class="right_item">
+                    <view class="evaluation_item">
+                        <view class="item_left">
+                            <view class="item_left_top">
+                                <view class="item_title">测测你的抑郁有多深？</view>
+                                <view class="item_text">抑郁测试[专业版]</view>
+                            </view>
+                            <view class="item_left_bottom">
+                                <view class="item_likes">好评度：9000</view>
+                                <view class="item_userNum">xxx人已测</view>
+                            </view>
+                        </view>
+                        <view class="item_right">
+                            <view class="item_label">性格</view>
+                            <image src="../../images/006.jpg" mode="aspectFill"/>      
+                        </view>
+                    </view>
+                </view>
+                <view class="right_item">
+                    <view class="evaluation_item">
+                        <view class="item_left">
+                            <view class="item_left_top">
+                                <view class="item_title">测测你的抑郁有多深？</view>
+                                <view class="item_text">抑郁测试[专业版]</view>
+                            </view>
+                            <view class="item_left_bottom">
+                                <view class="item_likes">好评度：9000</view>
+                                <view class="item_userNum">xxx人已测</view>
+                            </view>
+                        </view>
+                        <view class="item_right">
+                            <view class="item_label">性格</view>
+                            <image src="../../images/006.jpg" mode="aspectFill"/>      
+                        </view>
+                    </view>
+                </view>
+                <view class="right_item">
+                    <view class="evaluation_item">
+                        <view class="item_left">
+                            <view class="item_left_top">
+                                <view class="item_title">测测你的抑郁有多深？</view>
+                                <view class="item_text">抑郁测试[专业版]</view>
+                            </view>
+                            <view class="item_left_bottom">
+                                <view class="item_likes">好评度：9000</view>
+                                <view class="item_userNum">xxx人已测</view>
+                            </view>
+                        </view>
+                        <view class="item_right">
+                            <view class="item_label">性格</view>
+                            <image src="../../images/006.jpg" mode="aspectFill"/>      
+                        </view>
+                    </view>
+                </view>
+                <view class="right_item">
+                    <view class="evaluation_item">
+                        <view class="item_left">
+                            <view class="item_left_top">
+                                <view class="item_title">测测你的抑郁有多深？</view>
+                                <view class="item_text">抑郁测试[专业版]</view>
+                            </view>
+                            <view class="item_left_bottom">
+                                <view class="item_likes">好评度：9000</view>
+                                <view class="item_userNum">xxx人已测</view>
+                            </view>
+                        </view>
+                        <view class="item_right">
+                            <view class="item_label">性格</view>
+                            <image src="../../images/006.jpg" mode="aspectFill"/>      
+                        </view>
+                    </view>
+                </view>
+                <view class="right_item">
+                    <view class="evaluation_item">
+                        <view class="item_left">
+                            <view class="item_left_top">
+                                <view class="item_title">测测你的抑郁有多深？</view>
+                                <view class="item_text">抑郁测试[专业版]</view>
+                            </view>
+                            <view class="item_left_bottom">
+                                <view class="item_likes">好评度：9000</view>
+                                <view class="item_userNum">xxx人已测</view>
+                            </view>
+                        </view>
+                        <view class="item_right">
+                            <view class="item_label">性格</view>
+                            <image src="../../images/006.jpg" mode="aspectFill"/>      
+                        </view>
+                    </view>
+                </view> -->
+            </view>
+        </scroll-view>
+    </view>
+</view>

@@ -1,0 +1,46 @@
+<view class="page_nav">
+  <view class="nav_title">
+    <view wx:for="{{tabs}}"
+    wx:key="id"
+    class="nav_item"
+    bindtap="handleItemTap"
+    data-index="{{index}}"
+    >
+    <text class="{{item.isActive?'active':''}}">{{item.title}}</text>
+    </view>
+  </view>
+</view>
+<scroll-view scroll-y class="enq_list">
+    <view class="listContent">
+        <view 
+            class="order_item"
+            wx:for="{{orderList}}"
+            wx:key="id"
+            data-index="{{index}}"
+            >
+            <view>
+                <view class="item_top">
+                    <view class="item_top_left">
+                        <image class="" src="{{url+item.headImg}}" mode="aspectFill"/>
+                    </view>
+                    <view class="item_top_right">
+                        <view>
+                            <view class="name">{{item.nickname}}</view>
+                            <view class="type">聊天咨询</view>
+                        </view>
+                        <view>{{item.time}}</view>
+                        <view>
+                            <view>{{type == 0 ? '待完成' : '已完成'}}</view>
+                        </view>
+                    </view>
+                </view>
+                <view class="item_bottom">
+                    <view class="item_ctime"></view>
+                    <view class="item_btn">
+                        <view data-index="{{item.conId}}" wx:if="{{type == 0}}" bind:tap="toMessage">去咨询</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</scroll-view>

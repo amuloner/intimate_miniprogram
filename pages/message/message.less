@@ -1,0 +1,113 @@
+.page_msg{
+    background-color: white;
+    .msg_nav{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        height: 100rpx;
+        background-color: rgba(161, 161, 161, 0.1);
+
+        >view{
+            display: flex;
+            align-items: center;
+            padding-left: 35rpx;
+        }
+        .msg_nav_title{
+            height: 100%;
+            flex:5;
+            font-size: 45rpx;
+            color: RGB(117,140,250);
+            text-shadow: 1rpx 1rpx 35rpx RGB(117,140,250) ;
+        }
+        .msg_nav_button{
+            height: 100%;
+            flex: 1;
+            font-size: 30rpx;
+            color: red;
+        }
+    }
+    .msg_content{
+        height: 90.8vh;
+        .msg_item{
+            height: 150rpx;
+            width: 100%;
+            // background-color: skyblue; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            >view{
+                width: 95%;
+                height: 85%;
+                // background-color: green;
+                display: flex;
+                justify-content: start;
+                .item_left{
+                    flex: 1.2;
+                    // background-color: antiquewhite;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    >image{
+                        height: 70%;
+                        width: 70%;
+                        border-radius: 10rpx;
+                    }
+                }
+                .item_middle{
+                    flex: 4;
+                    // background-color: aquamarine;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    font-family: "黑体";
+                    >view{
+                        display: flex;
+                    }
+                    .msg_name{
+                        flex:1;
+                        display: flex;
+                        align-items: flex-end;
+                        font-size: 35rpx;
+                        // background-color: burlywood;
+                    }
+                    .new_msg{
+                        flex:1;
+                        width: 100%;
+                        font-size: 35rpx;
+                        display: flex;
+                        align-items: center;
+                        >text{
+                            font-size: 28rpx;
+                            color: rgba(0, 0, 0, 0.497);
+                            width: 459rpx;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+
+                    }
+                }
+                .item_right{
+                    flex: 1;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    .msg_time{
+                        display: flex;
+                        justify-content:flex-end;
+                        align-items: flex-end;
+                        flex: 1;
+                        color: rgba(0, 0, 0, 0.3);
+                        font-size: 25rpx;
+                        font-weight: bolder;
+                        // background-color: cadetblue;
+                    }
+                    .msg_status{
+                        flex: 1;
+                    }
+                }
+            }
+        }
+    }
+}

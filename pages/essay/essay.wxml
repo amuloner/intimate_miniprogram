@@ -1,0 +1,36 @@
+<view class="essay_nav">
+  <view class="nav_title">
+    <view wx:for="{{tabs}}"
+    wx:key="id"
+    class="nav_item"
+    bindtap="handleItemTap"
+    data-index="{{index}}"
+    >
+    <text class="{{item.isActive?'active':''}}">{{item.title}}</text>
+    </view>
+  </view>
+</view>
+<scroll-view scroll-y>
+  <view class="essay_content">
+    <view 
+      class="essay_item"
+      wx:for="{{essayList}}"
+      wx:key="id"
+      bind:tap="toEssayDetail"
+      data-index="{{index}}"
+      >
+      <view>
+        <view class="essay_item_left">
+          <image src="{{url+item.smallImg}}" model="aspectFill" />
+        </view>
+        <view class="essay_item_right">
+          <view class="essay_title">{{item.title}}</view>
+          <view class="essay_detail">
+            <view class="essay_author">作者：{{item.author}}</view>
+            <view class="essay_likes">{{item.readNum}}<icon class="iconfont icon-dianzan"></icon></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

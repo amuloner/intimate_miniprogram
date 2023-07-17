@@ -1,0 +1,63 @@
+<view class="intro_page" wx:if="{{step == 1}}">
+    <view class="intro_page_content">
+        <view class="content_top">
+            <view class="title">认证须知</view>
+            <view class="content">
+                认证咨询师之前，请你确定自己具有相关资格证明，你将在接下来先填写详细的个人信息，并上传有关认证资料的文件材料，经过系统核查证实后才能具备咨询师权限。
+            </view>
+        </view>
+        <view class="content_bottom"></view>
+    </view>
+    <view class="intro_page_btn">
+        <view bind:tap="toStep2">下一步</view>
+    </view>
+</view>
+<view class="form_page" wx:if="{{step == 2}}">
+    <view class="form_userinfo">
+        <view class="userImg">
+            <image src="{{url+userInfo.headImg}}" mode="aspectFill"/>
+        </view>
+        <view class="username">{{userInfo.nickname}}</view>
+    </view>
+    <view class="form_page_content">
+        <form catchsubmit="formSubmit">
+            <view class="form_input">
+                <view class="form_input_title">姓名:</view>
+                <view class="form_input_text">
+                    <input name="name" placeholder="请输入姓名" value="测试1" maxlength="10"/>
+                </view>
+            </view>
+            <view class="form_input">
+                <view class="form_input_title">身份证号:</view>
+                <view class="form_input_text">
+                    <input name="idCard" placeholder="请输入身份证号" value="511721201002211890" maxlength="18" type="number"/>
+                </view>
+            </view>
+            <view class="form_input">
+                <view class="form_input_title">性别:</view>
+                <view class="form_input_text">
+                    <input name="gender" placeholder="请输入性别" value="男" maxlength="1"/>
+                </view>
+            </view>
+            <view class="form_input">
+                <view class="form_input_title">住址:</view>
+                <view class="form_input_text">
+                    <input name="address" placeholder="请输入住址（省市区）" value="四川省成都市温江区"/>
+                </view>
+            </view>
+    
+            <view class="form_file">
+                <view class="form_file_title">认证材料:</view>
+                <view class="form_file_name">{{tempFile.name}}</view>
+                <view class="form_file_text">
+                    <view class="file_choose" bind:tap="chooseFile">选择</view>
+                </view>
+            </view>
+
+            <view class="from_btn">
+                <button type="primary" formType="submit">提交</button>
+            </view>
+        </form>
+    </view>
+</view>
+  

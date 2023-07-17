@@ -1,0 +1,126 @@
+page {
+  background-color: rgba(148, 148, 148, 0.212);
+}
+page .person_container {
+  height: 35vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255, 192, 203, 0.545);
+}
+page .person_container .person_hearder {
+  width: 95%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+page .person_container .person_hearder .userSetting {
+  height: 100rpx;
+  display: flex;
+  justify-content: flex-end;
+}
+page .person_container .person_hearder .userSetting > icon {
+  font-size: 45rpx;
+  height: 100%;
+  width: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+page .person_container .person_hearder .userinfo {
+  display: flex;
+}
+page .person_container .person_hearder .userinfo .userinfo_image {
+  margin: 0;
+  padding: 0;
+  width: 150rpx;
+  height: 150rpx;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+}
+page .person_container .person_hearder .userinfo .userinfo_image > image {
+  height: 80%;
+  width: 80%;
+  border-radius: 15rpx;
+}
+page .person_container .person_hearder .userinfo .userinfo_name {
+  height: 100rpx;
+  margin-left: 20rpx;
+  font-size: 40rpx;
+  display: flex;
+  align-items: center;
+}
+page .person_container .person_hearder .userintro {
+  height: 50rpx;
+  font-size: 30rpx;
+  color: rgba(0, 0, 0, 0.479);
+}
+page .person_container .person_hearder .userData {
+  transform: translate(-50%, -50%);
+  top: 100%;
+  left: 50%;
+  position: absolute;
+  height: 130rpx;
+  width: 100%;
+  background-color: white;
+  border-radius: 20rpx;
+  display: flex;
+  align-items: center;
+}
+page .person_container .person_hearder .userData > view {
+  flex: 1;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+}
+page .person_container .person_hearder .userData > view > view {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+page .person_container .person_hearder .userData > view > view:last-child {
+  font-size: 30rpx;
+}
+page .user_service {
+  margin: 0 auto;
+  margin-top: 100rpx;
+  width: 95%;
+  background-color: white;
+  border-radius: 20rpx;
+  display: flex;
+  justify-content: center;
+}
+page .user_service .service_list {
+  width: 90%;
+}
+page .user_service .service_list > view {
+  height: 100rpx;
+  border-bottom: 1rpx solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+}
+page .user_service .service_list > view > view {
+  height: 100%;
+  font-size: 35rpx;
+  display: flex;
+  align-items: center;
+}
+page .user_service .service_list > view > view:last-child {
+  width: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+page .user_service .service_list > view > view:last-child > text {
+  height: 20rpx;
+  width: 20rpx;
+  transform: rotate(45deg);
+  border: 3rpx rgba(0, 0, 0, 0.389);
+  border-style: solid solid none none;
+}
+page .user_service .service_list > view:last-child {
+  border-bottom: 0;
+}

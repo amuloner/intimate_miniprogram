@@ -1,0 +1,41 @@
+.login_page {
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+}
+.login_page .content {
+  width: 80vw;
+  height: 20vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.login_page .content .log {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login_page .content .log .appLog {
+  height: 100%;
+  width: 130rpx;
+}
+.login_page .content .log .appTitle {
+  font-size: 55rpx;
+  font-family: "华文新魏";
+}
+.login_page .content .btn {
+  flex: 1.5;
+  display: flex;
+  align-items: flex-end;
+}
+.login_page .content .btn .loginBtn {
+  border-radius: 20rpx;
+  width: 380rpx;
+}

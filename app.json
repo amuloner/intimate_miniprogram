@@ -1,0 +1,64 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/enquiry/enquiry",
+    "pages/testPage/testPage",
+    "pages/message/message",
+    "pages/person/person",
+    "pages/conDetail/conDetail",
+    "pages/essay/essay",
+    "pages/essayDetail/essayDetail",
+    "pages/cvsation/cvsation",
+    "pages/cvsDetail/cvsDetail",
+    "pages/regist/regist",
+    "pages/testDetail/testDetail",
+    "pages/msgPage/msgPage",
+    "pages/cvsAnswer/cvsAnswer",
+    "pages/searchPage/searchPage",
+    "pages/editPerson/editPerson",
+    "pages/myTest/myTest",
+    "pages/myEnquiry/myEnquiry",
+    "pages/mySetting/mySetting",
+    "pages/toCertified/toCertified",
+    "pages/myEssay/myEssay"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "知心",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icon/home.png",
+        "selectedIconPath": "icon/home-o.png"
+      },
+      {
+        "pagePath": "pages/testPage/testPage",
+        "text": "评测",
+        "iconPath": "icon/evaluation.png",
+        "selectedIconPath": "icon/evaluation-o.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "icon/message.png",
+        "selectedIconPath": "icon/message-o.png"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "个人",
+        "iconPath": "icon/my.png",
+        "selectedIconPath": "icon/my-o.png"
+      }
+    ],
+    "color": "#a8a8a8",
+    "selectedColor": "#000000"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

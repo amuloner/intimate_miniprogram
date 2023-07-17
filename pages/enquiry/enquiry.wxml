@@ -1,0 +1,47 @@
+<myHearder/>
+
+<!-- 筛选栏 -->
+<dropdownmenu 
+ dropDownMenuTitle='{{dropDownMenuTitle}}' 
+ bind:getConList = "getConList"
+  />
+
+<!-- 内容列表 -->
+<scroll-view scroll-y>
+    <view class="en_content">
+        <view class="en_head"></view>
+        <view class="en_item" 
+            wx:for="{{conList}}"
+            wx:key="id"
+            bind:tap="toConDetail"
+            data-index="{{index}}"
+            >
+            <view class="en_item_left">
+                <image src="{{url+item.headImg}}" mode="aspectFill"/>
+            </view>
+            <view class="en_item_right">
+                <view class="item_header">
+                    <view class="item_name">{{item.name}}</view>
+                    <view class="item_detail">{{item.conNum}}人次咨询 · 从业{{nowData}}年</view>
+                </view>
+                <view class="item_title">
+                    <view class="item_intro">{{item.achieve}}</view>
+                    <view>
+                        <view class="item_label">{{item.realm}}</view>
+                        <view class="item_address"><icon class="iconfont icon-zuobiao"></icon>{{item.address}}</view>
+                    </view>
+                    <view class="item_likes"><text>点赞量</text>{{item.conLikes}}</view>
+                    <view class="item_time"><icon class="iconfont icon-shijian"></icon>最快可约 {{item.recentTime}}</view>
+                </view>
+                <view class="item_comment" wx:if="{{item.newEvaluate}}">
+                    <view class="comment_header">
+                        <view class="comment_hearder_left">》》来访者评价</view>
+                        <view class="comment_hearder_right">{{item.evaluateNum}}个人最近评论了 > </view>
+                    </view>
+                    <view class="comment_content"><text>{{item.newEvaluate}}</text></view>
+                </view>
+            </view>
+        </view>
+        <view class="en_end">没有更多啦~</view>
+    </view>
+</scroll-view>

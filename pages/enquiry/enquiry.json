@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "myHearder": "../../components/myHearder/myHearder",
+    "dropdownmenu": "../../components/dropdownmenu/dropdownmenu"
+  }
+}

@@ -1,0 +1,78 @@
+<scroll-view scroll-y bindscroll="pageScroll">
+    <view class="cvs_page">
+        <view class="cvs_header">
+            <view class="userImg">
+                <image src="{{url+questionItem.userinfo.headImg}}" mode="aspectFill" />
+            </view>
+            <view class="cvs_container">
+                <view class="cvs_title">
+                    <view>{{questionItem.title}}</view>
+                </view>
+                <view class="cvs_detail">
+                    <view class="cvs_date">{{questionItem.date}}</view>
+                    <view class="cvs_readNum">345次阅读</view>
+                </view>
+                <view class="cvs_content">
+                    <view class="tex{{answerList.length}}" style="{{showAll[answerList.length].status ? 'display: block' : ''}}">
+                        <text>{{questionItem.content}}</text>
+                    </view>
+                    <view class="textBtn" style="{{showAll[answerList.length].colNumShow ? '' : 'display: none'}}" bind:tap="handChangeShow" data-index="{{answerList.length}}">{{showAll[answerList.length].status ? '收起' : '...全文'}}</view>
+                </view>
+            </view>
+        </view>
+        
+        <view class="cvs_btn {{scrollTop > viewHeight ? 'cvs_btn_Fixed':''}}">
+            <view class="btn_toHug" bind:tap="toStar" data-type="hug">
+                <view><icon class="iconfont {{isHug == 1 ? 'icon-aixin' : 'icon-aixin2'}}"></icon></view>
+                <view>
+                    <view>抱抱ta</view>
+                    <view>{{questionItem.hugNum}}个抱抱</view>
+                </view>
+            </view>
+            <view class="btn_toSame " bind:tap="toStar" data-type="same">
+                <view><icon class="iconfont {{isSame == 1 ? 'icon-xiaolian' : 'icon-xiaolian2'}} "></icon></view>
+                <view>
+                    <view>同感</view>
+                    <view>{{questionItem.sameNum}}人同感</view>
+                </view>
+            </view>
+            <view class="btn_toReply" bind:tap="toAnswerPage">
+                <view><icon class="iconfont icon-xiaoxi"></icon></view>
+                <view>
+                    <view>我来回答</view>
+                    <view>{{questionItem.answerNum}}个回答</view>
+                </view>
+            </view>
+        </view>
+        <view class="{{scrollTop > viewHeight ? 'cvs_btn2':''}}"></view>
+        
+        <view class="cvs_replyList">
+            <view class="noreply" wx:if="{{answerList.length == 0}}">暂无回答！</view>
+            <view 
+                class="reply_item"
+                wx:for="{{answerList}}"
+                wx:key="id"
+                >
+                <view class="item_left">
+                    <image src="{{url+item.fromUser.headImg}}" mode="aspectFill" />
+                </view>
+                <view class="item_right">
+                    <view class="item_userinfo">
+                        <view class="user_name">{{item.fromUser.nickname}}</view>
+                        <view class="item_date">{{item.date}}</view>
+                    </view>
+                    <view class="item_content">
+                        <view class="tex{{index}}" style="{{showAll[index].status ? 'display: block' : ''}}">
+                            <text>{{item.content}}</text>
+                        </view>
+                        <view style="{{showAll[index].colNumShow ? '' : 'display: none'}}" class="textBtn" bind:tap="handChangeShow" data-index="{{index}}">{{showAll[index].status ? '收起' : '...全文'}}</view>
+                    </view>
+                    <view class="item_toReport">
+                        <view></view>
+                        <!-- <view>举报</view> -->
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</scroll-view>

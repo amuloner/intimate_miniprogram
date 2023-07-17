@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "myHearder": "../../components/myHearder/myHearder",
+    "mySelect": "../../components/mySelect/mySelect"
+  },
+  "enablePullDownRefresh": true
+}

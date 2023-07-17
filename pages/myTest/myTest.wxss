@@ -1,0 +1,83 @@
+.right_menu {
+  height: 100vh;
+  width: 100%;
+}
+.right_menu .listContent {
+  height: 100%;
+  width: 100%;
+}
+.right_menu .listContent .right_item {
+  width: 100%;
+  height: 250rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1rpx solid #ccc;
+  border-bottom: 1rpx solid #ccc;
+  background-color: rgba(204, 204, 204, 0.122);
+}
+.right_menu .listContent .right_item .evaluation_item {
+  height: 180rpx;
+  width: 95%;
+  display: flex;
+  justify-content: flex-start;
+}
+.right_menu .listContent .right_item .evaluation_item .item_left {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.right_menu .listContent .right_item .evaluation_item .item_left .item_left_top {
+  flex: 3;
+}
+.right_menu .listContent .right_item .evaluation_item .item_left .item_left_top .item_title {
+  font-weight: 900;
+  font-size: 35rpx;
+}
+.right_menu .listContent .right_item .evaluation_item .item_left .item_left_top .item_text {
+  margin-top: 10rpx;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 600;
+  font-size: 25rpx;
+}
+.right_menu .listContent .right_item .evaluation_item .item_left .item_left_bottom {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20rpx 0 10rpx;
+}
+.right_menu .listContent .right_item .evaluation_item .item_left .item_left_bottom .item_likes {
+  font-size: 30rpx;
+  color: coral;
+}
+.right_menu .listContent .right_item .evaluation_item .item_left .item_left_bottom .item_userNum {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 30rpx;
+}
+.right_menu .listContent .right_item .evaluation_item .item_right {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.right_menu .listContent .right_item .evaluation_item .item_right image {
+  border-radius: 10rpx;
+  width: 100%;
+  height: 100%;
+}
+.right_menu .listContent .right_item .evaluation_item .item_right .item_label {
+  width: 60rpx;
+  height: 40rpx;
+  position: absolute;
+  border: 5rpx solid #489ff0;
+  border-radius: 10rpx;
+  font-size: 30rpx;
+  background-color: #fff;
+  color: #489ff0;
+  bottom: 5rpx;
+  right: -5rpx;
+}

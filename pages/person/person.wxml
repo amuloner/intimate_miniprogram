@@ -1,0 +1,57 @@
+<view class="person_container">
+    <view class="person_hearder">
+        <view class="userSetting" bind:tap="toEdit">
+            <!-- <icon class="iconfont icon-shezhi" /> -->
+        </view>
+        <view class="userinfo">
+            <view class="userinfo_image">
+                <image src="{{avatarUrl}}" mode="aspectFill"/>
+            </view>
+
+            <view class="userinfo_name">{{userInfo.nickname}}</view>
+        </view>
+        <view class="userintro">{{userInfo.userIntro || "填写简介更容易被认识"}}</view>
+        <view class="userData">
+            <view>
+                <view>0</view>
+                <view>获赞</view>
+            </view>
+            <view>
+                <view>{{userInfo.enquNum || 0}}</view>
+                <view>咨询</view>
+            </view>
+            <view>
+                <view>{{userInfo.testNum || 0}}</view>
+                <view>评测</view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="user_service">
+    <view class="service_list">
+        <view class="myEva" bind:tap="toMyEvaPage">
+            <view>我的评测</view>
+            <view><text></text></view>
+        </view>
+        <view class="myEnq" bind:tap="toMyEnqPage">
+            <view>我的咨询</view>
+            <view><text></text></view>
+        </view>
+        <block wx:if="{{userInfo.authority == 2}}">
+            <view class="beCon" bind:tap="toBeConPage">
+                <view>咨询师认证</view>
+                <view><text></text></view>
+            </view>
+        </block>
+        <block wx:elif="{{userInfo.authority == 1}}">
+            <view class="myEss" bind:tap="toMyEssay">
+                <view>我的文章</view>
+                <view><text></text></view>
+            </view>
+        </block>
+        <view class="mySet" bind:tap="toMysetPage">
+            <view>个人信息</view>
+            <view><text></text></view>
+        </view>
+    </view>
+</view>

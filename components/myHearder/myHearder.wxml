@@ -1,0 +1,19 @@
+<!-- 搜索框 -->
+<view class="hearder">
+    <view class="hearder_left">
+        <view class="log">
+            <image class="appLog" src="{{log_img}}" mode="aspectFit" />
+            <text class="appTitle">知心</text>
+        </view>
+    </view>
+    <view class="hearder_right">
+        <view class="search_row">
+            <icon class="iconfont icon-sousuo myIcon"></icon>
+            <input class="search_input" disabled
+            value="{{inputValue}}"
+            placeholder="搜索" 
+            bind:tap="toSearch"
+            />
+        </view>
+    </view>
+</view>

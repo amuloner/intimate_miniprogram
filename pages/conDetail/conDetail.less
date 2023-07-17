@@ -1,0 +1,278 @@
+@import url(../../fonts/myfonts/iconfont.wxss);
+scroll-view{
+    height: 88vh;
+    .con_detail{
+        .con_data{
+            height: 40vh;
+            background-color: rgb(62, 83, 90);
+            >view{
+                margin: 0 auto;
+                width: 95%;
+            }
+            .con_data_top{
+                height: 20vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                >view{
+                    width: 100%;
+                    height: 80%;
+                    display: flex;
+                    .con_image{
+                        flex: 1;
+                        height: 180rpx;
+                        image{
+                            height: 80%;
+                            width: 80%;
+                            border-radius: 50%;
+                        }
+                    }
+                    .con_user{
+                        flex: 3;
+                        >view{
+                            display: flex;
+                            align-items: center;
+                        }
+                        .con_name{
+                            align-items: flex-start;
+                            height: 60rpx;
+                            >text{
+                                font-weight: bold;
+                                color: white;
+                                font-size: 40rpx;
+                            }
+                        }
+                        .con_title{
+                            height: 60rpx;
+                            font-size: 25rpx;
+                            >text{
+                                color: RGB(255,154,131);
+                                padding:0 15rpx 0;
+                                background-color: white;
+                                border-radius: 20rpx;
+                            }
+                        }
+                        .con_registDate{
+                            height: 70rpx;
+                            font-size: 28rpx;
+                            >text{
+                                color: RGB(255,154,131);
+                                padding:1rpx 15rpx 1rpx;
+                                background-color: RGB(97,109,181);
+                                border-radius: 20rpx;
+                            }
+                        }
+                    }
+                }
+            }
+            .con_data_bottom{
+                // background-color: aqua;
+                .con_lable{
+                    display: flex;
+                    align-items: center;
+                    height: 70rpx;
+                    color: rgba(255, 255, 255, 0.679);
+                    // background-color: aquamarine;
+                    font-size: 28rpx;
+                }
+                .achieve{
+                    display: flex;
+                    font-size: 30rpx;
+                    color: rgba(255, 255, 255, 0.734);
+                    >view{
+                        flex: 1;
+                        >view{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                        >view:first-child{
+                            height: 80rpx;
+                            // background-color: lightsalmon;
+                        }
+                        >view:last-child{
+                            border-right: 1rpx solid black;
+                        }
+                    }
+                    .con_num{
+                        // background-color: lawngreen;
+                    }
+                    .con_time{
+                        // background-color: lightcoral;
+                    }
+                    .con_likes{
+                        // background-color: lightblue;
+                        >view:last-child{
+                            border-style: none;
+                        }
+                    }
+                }
+            }
+        }
+        .con_intro{
+            height: 60vh;
+            font-size: 35rpx;
+            text-indent: 20px;
+            >view:first-child{
+                font-size: 45rpx;
+                text-indent: 20px;
+            }
+            >view:last-child{
+                >view:last-child{
+                    height: 100rpx;
+                }
+            }
+        }
+    }
+}
+.footer_btn{
+    height: 180rpx;
+    width: 100%;
+    border-radius: 50rpx 50rpx 0 0;
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    >view{
+        height: 100rpx;
+        width: 85%;
+        display: flex;
+        justify-content: space-between;
+        .toMessage{
+            font-size: 28rpx;
+            color: RGB(130,142,157);
+            >icon{
+                font-size: 45rpx;
+            }
+        }
+        .toOrder{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 450rpx;
+            border-radius: 50rpx;
+            background-color: RGB(133,150,249);
+            box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,0.3),
+            7px 7px 20px 0px rgba(0,0,0,0.1),4px 4px 5px 0px rgba(0,0,0,0.1);
+            color: white;
+        }
+    }
+}
+.add_card{
+    display: none;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    .footer_addEnquiry{
+        width: 100%;
+        border-radius: 50rpx 50rpx 0 0;
+        position: absolute;
+        bottom: -1000rpx;
+        background-color: rgb(241, 241, 241);
+        display: flex;
+        flex-direction: column;
+        transition: bottom 4s;
+        .footer_title{
+            font-size: 40rpx;
+            font-weight: bold;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            height: 100rpx;
+        }
+        .footer_label{
+            height: 100rpx;
+            display: flex;
+            align-items: flex-end;
+            font-size: 30rpx;
+            color: rgb(106, 106, 106);
+        }
+        .footer_scroll{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            >scroll-view{
+                height: 620rpx;
+                width: 95%;
+                .dateItem{
+                    height: 120rpx;
+                    padding: 10rpx;
+                    display: flex;
+                    align-items: center;
+                    .date{
+                        width: 100rpx;
+                        height: 100rpx;
+                        font-size: 30rpx;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                    }
+                    .status{
+                        height: 100rpx;
+                        margin-left: 20rpx;
+                        display: flex;
+                        align-items: center;
+                        >view{
+                            height: 100%;
+                            width: 100rpx;
+                            border-radius: 20rpx;
+                            margin-right: 15rpx;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-direction: column;
+                            font-size: 25rpx;
+                            background-color: white;
+                            color: black;
+                            border: 1rpx solid rgb(214, 214, 214);
+                            >view:nth-child(2){
+                                width: 10rpx;
+                                margin: 8rpx;
+                                height: 1rpx;
+                                background-color: rgb(137, 137, 137);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .addBtn{
+            height: 120rpx;
+            display: flex;
+            align-items: center;
+            >button{
+                height: 90rpx;
+                width: 90%;
+                border-radius: 50rpx;
+                padding: 0;
+                border-radius: 50rpx;
+                background-color: RGB(133,150,249);
+                box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,0.3),
+                7px 7px 20px 0px rgba(0,0,0,0.1),4px 4px 5px 0px rgba(0,0,0,0.1);
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: normal;
+                font-size: 35rpx;
+            }
+        }
+    }
+}
+
+.weekHander{
+    color: blue;
+}
+.dateHander{
+    color: white;
+    background-color: lightblue;
+}

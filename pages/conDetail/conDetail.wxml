@@ -1,0 +1,94 @@
+<scroll-view scroll-y="{{true}}">
+    <view class="con_detail">
+        <view class="con_data">
+            <view class="con_data_top">
+                <view>
+                    <view class="con_image">
+                        <image src="{{url+conItem.headImg}}" mode="aspectFill"/>
+                    </view>
+                    <view class="con_user">
+                        <view class="con_name"><text>{{conItem.name}}</text></view>
+                        <view class="con_title"><text>专业咨询师</text></view>
+                        <view class="con_registDate"><text>2022年审通过</text></view>
+                    </view>
+                </view>
+            </view>
+            <view class="con_data_bottom">
+                <view class="con_lable">{{conItem.achieve}}</view>
+                <view class="achieve">
+                    <view class="con_num">
+                        <view>{{conItem.conNum}}人次</view>
+                        <view>咨询人数</view>
+                    </view>
+                    <view class="con_time">
+                        <view>{{loginTime}}</view>
+                        <view>加入时间</view>
+                    </view>
+                    <view class="con_likes">
+                        <view>{{conItem.conLikes}}次</view>
+                        <view>获赞</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="con_intro">
+            <view>简介：</view>
+            <view>
+                <text>{{conItem.conIntro}}</text>
+                <view></view>
+            </view>
+        </view>
+    </view>
+</scroll-view>
+<view class="footer_btn">
+    <view >
+        <view class="toMessage" bind:tap="toMsgDetail">
+            <icon class="iconfont icon-xiaoxi"></icon>
+            <view>私信</view>
+        </view>
+        <view class="toOrder" bind:tap="showCard">立即预约</view>
+    </view>
+</view>
+<view class="add_card" bind:tap="changeShow" style="display: {{isShow ? 'block':'none'}}">
+    <view class="footer_addEnquiry" catch:tap="reTap" style="bottom: {{ isShow ? '0':'1000'}}rpx">
+        <view class="footer_title">选择咨询时段</view>
+        <view class="footer_label">共有{{dateNum}}个时段供选择</view>
+        <view class="footer_scroll">
+            <scroll-view scroll-y>
+                <view 
+                    class="dateItem"
+                    wx:for="{{dateList}}"
+                    wx:key="title"
+                    >
+                    <view class="date {{weekIndex == index ? 'weekHander':''}}">
+                        <view>{{item.title}}</view>
+                        <view>{{item.date}}</view>
+                    </view>
+                    <view class="status">
+                        <block wx:if="{{item.tmp[0] == 2}}">
+                            <view style="color: rgb(137, 137, 137);background-color: lightgray">休息</view>
+                        </block>
+                        <block wx:else>
+                            <block 
+                                wx:for="{{item.tmp}}"
+                                wx:key="i"
+                                wx:for-index="i"
+                                wx:for-item="v"
+                                >
+                                <view wx:if="{{v == 1}}" style="color: rgb(137, 137, 137);background-color: lightgray">已满</view>
+                                <view wx:if="{{v == 0}}" bind:tap="selectDate" data-index="{{index}}" data-itemIndex="{{i}}" style="background: {{weekIndex == index && dateIndex == i ? 'lightblue':'white'}}">
+                                    <view>{{workTime[i].start}}</view>
+                                    <view></view>
+                                    <view>{{workTime[i].end}}</view>
+                                </view>
+                            </block>
+                        </block>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+        <view class="addBtn">
+            <button bind:tap="toOrder">确认预约</button>
+        </view>
+    </view>
+</view>

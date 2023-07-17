@@ -1,0 +1,186 @@
+@import "../../0.wxss";
+.page {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  overflow: hidden;
+}
+
+.position {
+  position: absolute;
+}
+
+.nav {
+  position: relative;
+  z-index: 99;
+  display: flex;
+  border-bottom: 1px solid #f7f7f7;
+  background: #fff;
+}
+
+.nav-child {
+  display: flex;
+  flex: 1;
+  text-align: center;
+  height: 30rpx;
+  align-items: center;
+  justify-content: center;
+  font-size: 24rpx;
+  margin: 20rpx 0;
+}
+
+.borders {
+  border-left: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+}
+
+.nav-title {
+  display: inline-block;
+}
+
+.icon {
+  display: inline-block;
+  border: 4px solid transparent;
+  border-top: 4px solid #9b9b9b;
+  margin-left: 5px;
+  margin-top: 10rpx;
+}
+
+.container {
+  z-index: 9;
+  position: relative;
+}
+.container_hd {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow-y: scroll;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.disappear {
+  display: none;
+}
+.show {
+  display: block;
+}
+
+.weatherTitle{
+  background-color: #fff;
+  color: #9b9b9b;
+  border-bottom: 2rpx solid #000;
+}
+.cityWeather{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(241, 238, 205);
+  min-height: 20vh;
+  overflow-x:scroll;
+  width: 100%;
+}
+.weather_item{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.weather_item_date{
+  flex: 1;
+}
+.weather_item_week{
+  flex:1;
+}
+.weather_icon{
+  flex: 1;
+}
+.weather_icon image{
+  height: 100rpx;
+}
+.dayweather{
+  flex: 1;
+}
+
+.type {
+  position: absolute;
+  display: none;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.nav-child.active .nav-title,.nav-child.active .iconfont {
+  color: #fc6060;
+}
+
+.nav-child.active .icon {
+  border-bottom: 4px solid #fc6060;
+  border-top: 0;
+}
+
+.typeMenu{
+  display: flex;
+  flex-flow: wrap;
+  height: 200rpx;
+  width: 100%;
+  background-color: #fff;
+}
+.type_item{
+  display: flex;
+  align-items: center;
+  margin: 20rpx 50rpx 0 20rpx;
+}
+checkbox{
+  zoom:70%;
+}
+
+.selectMenu{
+  background-color: #fff;
+  width: 100%;
+  min-height: 150rpx;
+  border: 1rpx solid transparent;
+}
+.att_item{
+    width: 95%;
+    height: 100rpx;
+    border: 1rpx solid black;
+    box-shadow: 5rpx 5rpx 5rpx;
+    margin: 10rpx auto;
+    display: flex;
+}
+.att_left{
+  flex: 4;
+}
+.att_right{
+  flex: 1;
+}
+.att_content{
+  margin: 25rpx 30rpx;
+  font-size: 30rpx;
+}
+.att_delete{
+  height: 60rpx;
+  width: 80rpx;
+  margin: 20rpx auto;
+  background-color: rgba(128, 128, 128, 0.514);
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 15rpx;
+  border: 5rpx solid rgb(128, 128, 128);
+}
+.select_hint{
+  width: 400rpx;
+  margin: 50rpx auto;
+  font-size: 40rpx;
+  color: rgb(133, 133, 133);
+}
+.select_footer{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.getPlan{
+  padding: 10rpx 20rpx;
+  margin: 0;
+  font-size: 45rpx;
+}

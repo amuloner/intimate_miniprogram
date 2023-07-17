@@ -1,0 +1,50 @@
+.nav-wrap {
+  position: fixed;
+  width: 750rpx;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  z-index: 9999999;
+  transform: translate3d(0, 0, 0);
+  background-color: white;
+}
+.nav-wrap .mynav {
+  position: relative;
+  /* 返回键 */
+  /* 标题 */
+}
+.nav-wrap .mynav .nav-capsule {
+  height: 100%;
+  width: 140rpx;
+  display: flex;
+  align-items: center;
+  margin-left: 35rpx;
+}
+.nav-wrap .mynav .nav-capsule .back-pre {
+  width: 22rpx;
+  height: 22rpx;
+  transform: rotate(45deg);
+  border: 8rpx black;
+  border-style: none none solid solid;
+}
+.nav-wrap .mynav .nav-title {
+  height: 100%;
+  width: 300rpx;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 35rpx;
+}
+.nav-wrap .mynav .nav-title .status {
+  font-size: 25rpx;
+  color: #797979;
+}

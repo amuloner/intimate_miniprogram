@@ -1,0 +1,66 @@
+<view class="tabs">
+  <view class="tabs_title">
+    <view wx:for="{{tabs}}"
+      wx:key="id"
+      class="title_item"
+      bindtap="handleItemChange"
+      data-index="{{index}}"
+    >
+      <view class="{{item.isActive?'active':''}}">
+        {{item.name}}<text></text>
+      </view>
+    </view>
+  </view>
+</view>
+<block wx:if="{{showPage === 0}}">
+  <scroll-view scroll-y>
+      <view 
+        class="cvs_content">
+        <view 
+          class="cvs_item"
+          wx:for="{{questionList}}"
+          wx:key="id"
+          bind:tap="toQuestionDetail"
+          data-index="{{index}}"
+        >
+          <view class="item_title">
+            <text>{{item.title}}</text>
+          </view>
+          <view class="item_button">
+            <view class="btn_reply">回答 {{item.answerNum}}</view>
+            <view class="btn_beSame">同感 {{item.sameNum}}</view>
+            <view class="btn_share">查看</view>
+          </view>
+        </view>
+      </view>
+  </scroll-view>
+</block>
+<block wx:else>
+  <!-- 提问 -->
+  <view class="ask_container">
+    <view class="ask_page">
+      <form catchsubmit="formSubmit" catchreset="formReset">
+        <view class="titleInpt">
+          <input 
+            name="title" 
+            placeholder="我想要问...（5-25字符）" 
+            maxlength="25"
+            value="{{title}}"
+            />
+        </view>
+        <view class="contentInput">
+          <textarea
+           name="content" 
+           placeholder="描述你的经历与感受..."
+           value="{{content}}"
+           />
+        </view>
+        <view class="ask_btn">
+          <button type="primary" formType="submit">提问</button>
+          <button formType="reset">重置</button>
+        </view>
+      </form>
+    </view>
+  </view>
+</block>
+

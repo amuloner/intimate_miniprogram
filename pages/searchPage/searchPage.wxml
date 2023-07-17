@@ -1,0 +1,164 @@
+<!--搜索框 -->
+<view class="search_row">
+    <view class="search_input">
+        <view class="search_icon"></view>
+        <input value="{{inputValue}}" placeholder="输入标题或内容" 
+        bindinput="bInput"
+        />
+    </view>
+    <block wx:if="{{!isInput}}">
+        <view class="search_btn exit" bind:tap="exit">取消</view>
+    </block>
+    <block wx:else>
+        <view class="search_btn commit" bind:tap="commit">搜索</view>
+    </block>
+</view>
+<block wx:if="{{!isSearch}}">
+    <view class="search_hot">
+        <view class="title">热门搜索</view>
+        <view class="content">
+            <view bind:tap="getSearch" data-text="日签">日签</view>
+            <view bind:tap="getSearch" data-text="半价咨询">半价咨询</view>
+            <view bind:tap="getSearch" data-text="焦虑">焦虑</view>
+            <view bind:tap="getSearch" data-text="抑郁">抑郁</view>
+            <view bind:tap="getSearch" data-text="家庭">家庭</view>
+            <view bind:tap="getSearch" data-text="家庭">家庭</view>
+            <view bind:tap="getSearch" data-text="家庭">家庭</view>
+            <view bind:tap="getSearch" data-text="家庭">家庭</view>
+            <view bind:tap="getSearch" data-text="家庭">家庭</view>
+        </view>
+    </view>
+</block>
+<block wx:else>
+    <view class="search_nav">
+      <view class="nav_title">
+        <view wx:for="{{tabs}}"
+        wx:key="id"
+        class="nav_item"
+        bindtap="handleItemTap"
+        data-index="{{index}}"
+        >
+        <text class="{{item.id == currentNav?'active':''}}">{{item.title}}</text>
+        </view>
+      </view>
+    </view>
+    <scroll-view scroll-y>
+        <view class="item_content" wx:if="{{conList.length > 0}}">
+            <view class="item_title">咨询</view>
+            <view 
+            class="con_item"
+            wx:for="{{conList}}"
+            wx:key="id"
+            bind:tap="toDetail"
+            data-index="{{index}}"
+            data-type="con"
+            >
+                <view>
+                    <view class="con_item_left">
+                        <image src="{{url+item.headImg}}" model="aspectFill" />
+                    </view>
+                    <view class="con_item_right">
+                        <view>
+                            <view class="con_name">{{item.name}}</view>
+                            <view class="con_address"><icon class="iconfont icon-zuobiao"></icon>{{item.address}}</view>
+                        </view>
+                        <view class="con_intro">{{item.achieve}}</view>
+                        <view class="con_detail">
+                            <view class="con_conNum">{{item.conNum}}人咨询过</view>
+                            <view class="con_likes">{{item.conLikes}}<icon class="iconfont icon-dianzan"></icon>点赞量</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view wx:if="{{currentNav == 0}}" class="item_footer" bind:tap="handleItemTap" data-index="1">
+                更多
+                <text>></text>  
+            </view>
+        </view>
+        <view class="item_content" wx:if="{{essayList.length > 0}}">
+            <view class="item_title">文章</view>
+            <view 
+                class="essay_item"
+                wx:for="{{essayList}}"
+                wx:key="id"
+                bind:tap="toDetail"
+                data-index="{{index}}"
+                data-type="essay"
+                >
+                    <view>
+                        <view class="essay_item_left">
+                            <image src="{{url+item.smallImg}}" model="aspectFill" />
+                        </view>
+                        <view class="essay_item_right">
+                            <view class="essay_title">{{item.title}}</view>
+                            <view class="essay_detail">
+                                <view class="essay_author">作者：{{item.author}}</view>
+                                <view class="essay_likes">{{item.essayLikes}}<icon class="iconfont icon-dianzan"></icon></view>
+                            </view>
+                        </view>
+                    </view>
+            </view>
+            <view wx:if="{{currentNav == 0}}" class="item_footer" bind:tap="handleItemTap" data-index="2">
+                更多
+                <text>></text>  
+            </view>
+        </view>
+        <view class="item_content" wx:if="{{questionList.length > 0}}">
+            <view class="item_title">问答</view>
+            <view 
+                class="cvs_item"
+                wx:for="{{questionList}}"
+                wx:key="id"
+                bind:tap="toDetail"
+                data-index="{{index}}"
+                data-type="cvs"
+                >
+                    <view>
+                        <view class="cvs_item_left">
+                            <image src="{{url+item.userinfo.headImg}}" model="aspectFill" />
+                        </view>
+                        <view class="cvs_item_right">
+                            <view class="cvs_title">{{item.title}}</view>
+                            <view class="cvs_content">{{item.content}}</view>
+                        </view>
+                    </view>
+            </view>
+            <view wx:if="{{currentNav == 0}}" class="item_footer" bind:tap="handleItemTap" data-index="3">
+                更多
+                <text>></text>  
+            </view>
+        </view>
+        <view class="item_content" wx:if="{{testList.length > 0}}">
+            <view class="item_title">测评</view>
+            <view 
+                class="test_item"
+                wx:for="{{testList}}"
+                wx:key="id"
+                bind:tap="toDetail"
+                data-index="{{index}}"
+                data-type="test"
+                >
+                <view class="evaluation_item">
+                    <view class="item_left">
+                        <view class="item_label">{{item.label}}</view>
+                        <image src="{{url+item.image}}" mode="aspectFill"/>
+                    </view>
+                    <view class="item_right">
+                        <view class="item_left_top">
+                            <view class="item_title">{{item.title}}</view>
+                            <view class="item_text">{{item.sub_title}}</view>
+                        </view>
+                        <view class="item_left_bottom">
+                            <view class="item_likes">好评度：9000</view>
+                            <view class="item_userNum">3724人已测</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view wx:if="{{currentNav == 0}}" class="item_footer" bind:tap="handleItemTap" data-index="4">
+                更多
+                <text>></text>  
+            </view>
+        </view>
+    </scroll-view>
+</block>

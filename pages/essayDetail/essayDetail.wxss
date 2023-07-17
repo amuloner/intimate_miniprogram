@@ -1,0 +1,420 @@
+/* CDN 服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+  font-family: 'iconfont';
+  /* Project id 3606436 */
+  src: url('data:application/x-font-woff2;charset=utf-8;base64,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') format('woff2'), url('//at.alicdn.com/t/c/font_3606436_r8y71qj019i.woff?t=1682160173846') format('woff'), url('//at.alicdn.com/t/c/font_3606436_r8y71qj019i.ttf?t=1682160173846') format('truetype');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-wodezixun:before {
+  content: "\e62d";
+}
+.icon-xiaoxi:before {
+  content: "\e711";
+}
+.icon-ceshi:before {
+  content: "\e606";
+}
+.icon-sousuo:before {
+  content: "\e622";
+}
+.icon-dian-copy:before {
+  content: "\ec1f";
+  font-size: 70rpx;
+}
+.icon-chenggong:before {
+  content: "\e656";
+  font-size: 45rpx;
+}
+.icon-zuobiao:before {
+  content: "\e615";
+  font-size: 30rpx;
+}
+.icon-shijian:before {
+  content: "\e8c5";
+}
+.icon-dianzan:before {
+  content: "\e8c3";
+}
+.icon-xiaoxi1:before {
+  content: "\e8bd";
+}
+.icon-aixin:before {
+  content: "\e85c";
+}
+.icon-aixin2:before {
+  content: "\ec21";
+}
+.icon-xiaolian:before {
+  content: "\e638";
+}
+.icon-xiaolian2:before {
+  content: "\ec22";
+}
+.icon-zhengquewancheng:before {
+  content: "\e8e5";
+}
+.icon-cuowu1:before {
+  content: "\e641";
+}
+.icon-cuowuguanbiquxiao:before {
+  content: "\e8e7";
+}
+.icon-shezhi:before {
+  content: "\e64b";
+}
+scroll-view {
+  height: 92vh;
+}
+scroll-view .essay_title {
+  font-size: 45rpx;
+  font-weight: bold;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+scroll-view .essay_userdata {
+  height: 150rpx;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+scroll-view .essay_userdata .userdata {
+  width: 95%;
+  height: 75%;
+  display: flex;
+  align-items: center;
+}
+scroll-view .essay_userdata .userdata .data_left {
+  display: flex;
+  height: 100%;
+}
+scroll-view .essay_userdata .userdata .data_left .data_image {
+  height: 100rpx;
+  width: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+scroll-view .essay_userdata .userdata .data_left .data_image image {
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+}
+scroll-view .essay_userdata .userdata .data_left .data_detail {
+  margin-left: 20rpx;
+}
+scroll-view .essay_userdata .userdata .data_left .data_detail .date_name {
+  display: flex;
+  align-items: center;
+  height: 60rpx;
+  font-size: 30rpx;
+}
+scroll-view .essay_userdata .userdata .data_left .data_detail .data_lable {
+  font-size: 25rpx;
+  color: rgba(0, 0, 0, 0.49);
+}
+scroll-view .essay_content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+scroll-view .essay_content .essay_detail {
+  width: 95%;
+  text-indent: 60rpx;
+  font-size: 30rpx;
+  line-height: 60rpx;
+}
+scroll-view .essay_content .essay_footer {
+  width: 95%;
+  height: 80rpx;
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.67);
+}
+scroll-view .essay_content .essay_comment {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+scroll-view .essay_content .essay_comment .comment_title {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  text-indent: 10rpx;
+  font-size: 40rpx;
+  border-bottom: 1rpx solid rgba(0, 0, 0, 0.356);
+}
+scroll-view .essay_content .essay_comment .comment_title > icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45rpx;
+  margin-right: 10rpx;
+}
+scroll-view .essay_content .essay_comment .comment_item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+scroll-view .essay_content .essay_comment .comment_item .item {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20rpx;
+}
+scroll-view .essay_content .essay_comment .comment_item .item .item_left {
+  flex: 1;
+  height: 108rpx;
+  display: flex;
+  justify-content: center;
+}
+scroll-view .essay_content .essay_comment .comment_item .item .item_left image {
+  height: 70%;
+  width: 70%;
+  border-radius: 50%;
+}
+scroll-view .essay_content .essay_comment .comment_item .item .item_right {
+  flex: 5;
+}
+scroll-view .essay_content .essay_comment .comment_item .item .item_right .item_name {
+  color: #5f6771;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  font-size: 32rpx;
+}
+scroll-view .essay_content .essay_comment .comment_item .item .item_right .item_comment {
+  font-size: 32rpx;
+}
+scroll-view .essay_content .essay_comment .comment_item .item .item_right .item_footer {
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgba(166, 167, 171);
+}
+scroll-view .essay_content .essay_comment .comment_item .item .item_right .item_footer .item_footer_date {
+  font-size: 28rpx;
+}
+scroll-view .essay_content .essay_comment .comment_item .item .item_right .item_footer .item_footer_toReplay {
+  font-size: 28rpx;
+  display: flex;
+}
+scroll-view .essay_content .essay_comment .comment_item .item .item_right .item_footer .item_footer_toReplay > icon {
+  margin-left: 10rpx;
+  font-size: 35rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+scroll-view .essay_content .essay_comment .comment_item .item .item_right .item_reply {
+  border-top: 1rpx solid rgba(166, 167, 171, 0.5);
+  width: 100%;
+}
+scroll-view .essay_content .essay_comment .comment_item .item .item_right .item_reply > view {
+  margin-top: 10rpx;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+scroll-view .essay_content .essay_comment .comment_item .item .item_right .item_reply > view .reply_left {
+  flex: 1;
+  height: 108rpx;
+}
+scroll-view .essay_content .essay_comment .comment_item .item .item_right .item_reply > view .reply_left image {
+  height: 70rpx;
+  width: 70rpx;
+  border-radius: 50%;
+}
+scroll-view .essay_content .essay_comment .comment_item .item .item_right .item_reply > view .reply_right {
+  flex: 5;
+}
+scroll-view .essay_content .essay_comment .comment_item .item .item_right .item_reply > view .reply_right .reply_name {
+  color: #5f6771;
+  height: 80rpx;
+  align-items: center;
+  font-size: 28rpx;
+  display: flex;
+}
+scroll-view .essay_content .essay_comment .comment_item .item .item_right .item_reply > view .reply_right .reply_name > text:nth-child(2) {
+  margin: 0 25rpx 0;
+  font-weight: bolder;
+  color: black;
+}
+scroll-view .essay_content .essay_comment .comment_item .item .item_right .item_reply > view .reply_right .reply_name .to_user {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+scroll-view .essay_content .essay_comment .comment_item .item .item_right .item_reply > view .reply_right .reply_name .to_user .to_user_image {
+  height: 80rpx;
+  width: 100rpx;
+  display: flex;
+  justify-content: center;
+}
+scroll-view .essay_content .essay_comment .comment_item .item .item_right .item_reply > view .reply_right .reply_name .to_user .to_user_image image {
+  height: 60rpx;
+  width: 60rpx;
+  border-radius: 50%;
+}
+scroll-view .essay_content .essay_comment .comment_item .item .item_right .item_reply > view .reply_right .reply_comment {
+  font-size: 32rpx;
+}
+scroll-view .essay_content .essay_comment .comment_item .item .item_right .item_reply > view .reply_right .reply_footer {
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  color: rgba(166, 167, 171);
+  justify-content: space-between;
+}
+scroll-view .essay_content .essay_comment .comment_item .item .item_right .item_reply > view .reply_right .reply_footer .reply_footer_date {
+  font-size: 28rpx;
+}
+scroll-view .essay_content .essay_comment .comment_item .item .item_right .item_reply > view .reply_right .reply_footer .reply_footer_toReplay {
+  font-size: 28rpx;
+  display: flex;
+}
+scroll-view .essay_content .essay_comment .comment_item .item .item_right .item_reply > view .reply_right .reply_footer .reply_footer_toReplay > icon {
+  margin-left: 10rpx;
+  font-size: 35rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+scroll-view .essay_content > view:last-child {
+  height: 180rpx;
+  width: 100%;
+  text-align: center;
+  line-height: 120rpx;
+  color: rgba(0, 0, 0, 0.316);
+  font-size: 30rpx;
+  background-color: rgba(128, 128, 128, 0.188);
+}
+.page_footer {
+  height: 8vh;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+.page_footer > view {
+  height: 70%;
+  width: 100%;
+  display: flex;
+}
+.page_footer > view .comment_input {
+  height: 100%;
+  display: flex;
+  flex: 1.2;
+  align-items: center;
+  justify-content: center;
+}
+.page_footer > view .comment_input > input {
+  width: 90%;
+  height: 100%;
+  border-radius: 50rpx;
+  background-color: rgba(188, 188, 188, 0.3);
+}
+.page_footer > view .comment_button {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.page_footer > view .comment_button > icon {
+  font-size: 45rpx;
+}
+.page_footer > view .comment_button .icon-aixin1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.page_footer > view .comment_button .icon-xiaoxi1 {
+  width: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.myCover {
+  background-color: rgba(0, 0, 0, 0.314);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  z-index: 3;
+}
+.myCover .myInput {
+  margin-top: 80rpx;
+  height: 350rpx;
+  width: 100%;
+  background-color: #dcdcdc;
+}
+.myCover .myInput .myInput_header {
+  display: flex;
+  height: 70rpx;
+  justify-content: space-between;
+}
+.myCover .myInput .myInput_header .left_btn {
+  height: 100%;
+  width: 150rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30rpx;
+}
+.myCover .myInput .myInput_header .left_btn > icon {
+  height: 100%;
+  font-size: 45rpx;
+}
+.myCover .myInput .myInput_header .title {
+  font-size: 35rpx;
+  display: flex;
+  align-items: center;
+}
+.myCover .myInput .myInput_header .right_btn {
+  height: 100%;
+  width: 150rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30rpx;
+}
+.myCover .myInput .myInput_header .right_btn > icon {
+  height: 100%;
+  font-size: 55rpx;
+}
+.myCover .myInput .myInput_comment {
+  height: 280rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.myCover .myInput .myInput_comment > textarea {
+  width: 95%;
+  height: 80%;
+  border-radius: 20rpx;
+  background-color: white;
+}
+.myCover .myInput .myInput_footer switch {
+  zoom: 0.6;
+  margin-left: 30rpx;
+}

@@ -1,0 +1,42 @@
+<view class="user_setting">
+    <view class="setting_list">
+        <view class="head_img">
+            <view>头像</view>
+            <button 
+                class="avatar-wrapper userinfo_image" 
+                open-type="chooseAvatar"
+                bind:chooseavatar="onChooseAvatar"
+                >
+                <image class="avatar" mode="aspectFill" src="{{avatarUrl}}"></image>
+            </button> 
+        </view>
+        <view class="nickname">
+            <view>昵称</view>
+            <input 
+                id="nickname" 
+                type="nickname" 
+                class="nickname userinfo_name" 
+                placeholder=""
+                value="{{nickName}}"
+                bindblur="changeNickname"
+                maxlength="10"
+            />
+        </view>
+        <view class="userIntro">
+            <view>个性签名</view>
+            <input class="userinfo_intro"
+             value="{{userIntro}}"
+             type="text|number|idcard|digit|time|date" 
+             placeholder="请简单介绍一下自己~" 
+             placeholder-style="font-size: 30rpx; text-align: right;" 
+             placeholder-class="input-placeholder"
+             maxlength="140" 
+             bindinput="" 
+             bindfocus="" 
+             bindblur="changeUserIntro" 
+             bindconfirm="">
+                
+            </input>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,308 @@
+@import "../../0.wxss";
+
+.nav {
+  margin-top: 80rpx;
+  position: relative;
+  z-index: 99;
+  .nav_list{
+      display: flex;
+      border-bottom: 1px solid #f7f7f7;
+      height: 80rpx;
+      background: #fff;
+        .nav-child {
+            display: flex;
+            flex: 1;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            font-size: 28rpx;
+            height: 40rpx;
+            margin: 20rpx 0;
+            .nav-title {
+                display: inline-block;
+            }
+            .icon {
+                display: inline-block;
+                border: 4px solid transparent;
+                border-top: 4px solid #9b9b9b;
+                margin-left: 5px;
+                margin-top: 10rpx;
+            }
+        }
+        .nav_active {
+            .icon {
+                border-bottom: 4px solid #2c95df;
+                border-top: 0;
+            }
+            .nav-title,.iconfont{
+                color: #2c95df;
+            }
+        }
+        .borders {
+            border-left: 1px solid #e6e6e6;
+            border-right: 1px solid #e6e6e6;
+        }
+    }
+
+    .nav_content{
+        height: 86.5vh;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        position: absolute;
+        top: 80rpx;
+        .nav_container{
+            background-color: #fff;
+            height: 200rpx;
+            width: 100%;
+        }
+        .con_city{
+            height: 75%;
+            .con_city_top{
+                display: flex;
+                height: 85%;
+                .city_province,.city_city,.city_regional{
+                    background-color: #F1F3FE;
+                    flex: 1;
+                    .select_name{
+                        height: 15%;
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+                        padding-left: 20rpx;
+                        >view{
+                            width: 90%;
+                            font-size: 32rpx;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            word-break: break-all;
+                            color: #6b7786;
+                        }
+                        .city_active{color: #879CFB;}
+                    }
+                    .common_font{
+                        color: #879CFB;
+                        height: 15%;
+                        font-size: 32rpx;
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+                        padding-left: 20rpx;
+                    }
+                }
+                .city_city{
+                    background-color: #fff;
+                }
+                .city_regional{
+                    background-color: #fff;
+                }
+                scroll-view{
+                    height: 100%;
+                }
+            }
+            .con_city_bottom{
+                display: flex;
+                height: 15%;
+                >view{
+                    flex: 1;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 35rpx;
+                    color: #6A83F9;
+                }
+            }
+        }
+        .con_date{
+            height: 30%;
+            .con_date_top{
+                width: 90%;
+                margin: 0 auto;
+                height: 70%;
+                display: flex;
+                flex-direction: column;
+                .date_label{
+                    flex: 1;
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+                    font-size: 28rpx;
+                    color: #7F8D9C;
+                }
+                .date_box{
+                    flex: 3;
+                    display:flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    // background-color: #6A83F9;
+                    .date_box_child{
+                        height: 75%;
+                        width: 120rpx;
+                        background-color: #F1F4F5;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 12rpx;
+                        >view{
+                            flex: 1;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                        >view:first-child{
+                            font-size: 30rpx;
+                            font-weight: bolder;
+                        }
+                        >view:last-child{
+                            font-size: 26rpx;
+                            color: #A6AEB6;
+                        }
+                    }
+                    .date_active{
+                        border: 1rpx solid #879cfb59;
+                        color:#879CFB;
+                        >view:last-child{
+                            color: #879CFB;
+                        }
+                    }
+                }
+            }
+            .con_date_bottom{
+                display: flex;
+                height: 30%;
+                border-top: 1px solid #F1F4F5;
+                >view{
+                    flex: 1;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 35rpx;
+                    color: #6A83F9;
+                }
+            }
+        }
+        .con_sort{
+            height: 18%;
+            .con_sort_top{
+                width: 90%;
+                margin: 0 auto;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                .sort_label{
+                    flex: 1;
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+                    font-size: 28rpx;
+                    color: #7F8D9C;
+                }
+                .sort_box{
+                    flex: 3;
+                    display:flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .sort_box_child{
+                        height: 50%;
+                        width: 47.5%;
+                        background-color: #F1F4F5;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 12rpx;
+                        >view{
+                            flex: 1;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: 32rpx;
+                            color: #798796;
+                        }
+                        
+                    }
+                    .sort_active{
+                        border: 1rpx solid #879cfb59;
+                        color:#879CFB;
+                        >view{
+                            color: #879CFB;
+                        }
+                    }
+                }
+            }
+        }
+        .con_select{
+            height: 70%;
+            .con_select_top{
+                width: 90%;
+                margin: 0 auto;
+                height: 85%;
+                display: flex;
+                flex-direction: column;
+                >scroll-view{
+                    height: 100%;
+                }
+                .select_child{
+                    margin-bottom: 40rpx;
+                    .select_label{
+                        height: 80rpx;
+                        display: flex;
+                        align-items: center;
+                        justify-content: start;
+                        font-size: 28rpx;
+                        color: #8C98A6;
+                    }
+                    .select_box{
+                        display:flex;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        .select_box_child{
+                            height: 70rpx;
+                            width: 30%;
+                            background-color: #F1F4F5;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 12rpx;
+                            margin-bottom: 20rpx;
+                            >view{
+                                flex: 1;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                font-size: 32rpx;
+                                color: #798796;
+                            }
+                            
+                        }
+                        .select_active{
+                            border: 1rpx solid #879cfb59;
+                            color:#879CFB;
+                            >view{
+                                color: #879CFB;
+                            }
+                        }
+                    }
+                }
+            }
+            .con_select_bottom{
+                display: flex;
+                height: 15%;
+                border-top: 1px solid #F1F4F5;
+                >view{
+                    flex: 1;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 35rpx;
+                    color: #6A83F9;
+                }
+            }
+        }
+    }
+}

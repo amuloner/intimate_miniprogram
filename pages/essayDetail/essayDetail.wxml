@@ -1,0 +1,136 @@
+<scroll-view scroll-y scroll-into-view="{{navView}}">
+    <view class="essay_title">{{essayItem.title}}</view>
+    <view class="essay_userdata">
+        <view class="userdata">
+            <view class="data_left">
+                <view class="data_image">
+                    <image src="{{url+essayItem.smallImg}}" mode="aspectFill"/>
+                </view>
+                <view class="data_detail">
+                    <view class="date_name">{{essayItem.author}}</view>
+                    <view class="data_lable">认证作家 优质答主</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="essay_content">
+        <view class="essay_detail">
+            <text user-selectable>{{essayItem.content}}</text>
+        </view>
+        <view class="essay_footer">
+            <text>发布于：{{essayItem.uploadTime}}</text>
+        </view>
+        <view class="essay_comment" id="essay_comment" wx:if="{{status == 1}}">
+              
+            <view class="comment_title"><icon class="iconfont icon-xiaoxi1"></icon>全部评论</view>
+            <view class="comment_item">
+                <view 
+                    class="item"
+                    wx:for="{{commentsList}}"
+                    wx:key="id"
+                    >
+                    <view class="item_left">
+                        <image src="{{url+item.fromUser.headImg}}" mode="aspectFill"/>
+                    </view>
+                    <view class="item_right">
+                        <view class="item_name">{{item.fromUser.nickname}}</view>
+                        <view class="item_comment"><text>{{item.content}}</text></view>
+                        <view class="item_footer">
+                            <view class="item_footer_date">{{item.date}}</view>
+                            <view 
+                                class="item_footer_toReplay" 
+                                bind:tap="showInput"
+                                data-type="reply1"
+                                data-item="{{item}}"
+                                >{{item.replyList.length}}<icon class="iconfont icon-xiaoxi1"></icon></view>
+                        </view>
+                        <block wx:if="{{item.replyList.length > 0}}">
+                            <view 
+                                class="item_reply"
+                                wx:for="{{item.replyList}}"
+                                wx:key="id"
+                                wx:for-item="item2"
+                                >
+                                <view>
+                                    <view class="reply_left">
+                                        <image src="{{url+item2.fromUser.headImg}}" mode="aspectFill"/>
+                                    </view>
+                                    <view class="reply_right">
+                                        <view class="reply_name">
+                                            <text>{{item2.fromUser.nickname}}</text>
+                                            <text>回复</text>
+                                            <view class="to_user">
+                                                <view class="to_user_image">
+                                                    <image src="{{url+item2.toUser.headImg}}" mode="aspectFill"/>
+                                                </view>
+                                                <view class="to_user_name">{{item2.toUser.nickname}}</view>
+                                            </view>
+                                        </view>
+                                        <view class="reply_comment">{{item2.content}}</view>
+                                        <view class="reply_footer">
+                                            <view class="reply_footer_date">{{item2.date}}</view>
+                                            <view 
+                                                class="reply_footer_toReplay" 
+                                                bind:tap="showInput"
+                                                data-type="reply2"
+                                                data-item="{{item2}}"
+                                                ><icon class="iconfont icon-xiaoxi1"></icon></view>
+                                        </view>
+                                    </view>
+                                </view>
+                                  
+                            </view>
+                        </block>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view>已全部展示</view>
+    </view>
+</scroll-view>
+<view class="page_footer" wx:if="{{status == 1}}">
+    <view>
+        <view class="comment_input">
+            <input type="text" 
+                placeholder="我想说..." 
+                placeholder-style="font-size:30rpx;padding-left:30rpx" 
+                placeholder-class="input-placeholder"
+                disabled
+                bind:tap="showInput"
+                >
+            </input>
+        </view>
+        <view class="comment_button">
+            <!-- <icon class="iconfont icon-aixin1"></icon> -->
+            <icon class="iconfont icon-xiaoxi1" bind:tap="handlerNav"></icon>
+        </view>
+    </view>
+</view>
+<view class="myCover" style="display: {{isShow ? 'flex' : 'none'}}" bind:tap="hideInput">
+    <view class="myInput" catch:tap="stop">
+        <view class="myInput_header">
+            <view class="left_btn" bind:tap="hideInput">取消</view>
+            <view class="title">评论</view>
+            <view class="right_btn" bind:tap="sendComment">发表</view>
+        </view>
+        <view class="myInput_comment">
+            <textarea 
+            value="{{content}}" 
+            placeholder="{{replyUser}}"
+            placeholder-style="font-size: 32rpx"
+            placeholder-class="textarea-placeholder"
+            maxlength="140" 
+            auto-focus="true" 
+            auto-height="" 
+            bindlinechange="%{15}"
+            bindinput="changeValue"
+            >
+                
+            </textarea>
+              
+        </view>
+        <!-- <view class="myInput_footer">
+            <switch type="switch" bindchange="">匿名</switch>
+        </view> -->
+    </view>
+</view>

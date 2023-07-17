@@ -1,0 +1,143 @@
+@import url(../../fonts/myfonts/iconfont.wxss);
+.tabs{
+    height: 90rpx;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    box-shadow: 0rpx 1rpx 5rpx black;
+    .tabs_title{
+        // background-color: lightcoral;
+        width: 40%;
+        display: flex;
+        height: 100%;
+        font-size: 35rpx;
+        align-items: center;
+        .title_item{
+            width: 120rpx;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // background-color: lightblue;
+            >view{  
+                position: relative;
+                >text{}
+            }
+        }
+        .active{
+            >text{
+                height: 15rpx;
+                width: 100%;
+                background-color: rgb(251, 192, 180);
+                opacity: 0.8;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+        }
+    }
+}
+scroll-view{
+    margin-top: 90rpx;
+    height: 91.6vh;
+    width: 100%;
+    background-color: rgba(204, 204, 204, 0.668);
+    .cvs_content{
+        height: 100%;
+        width: 100%;
+        .cvs_item{
+            margin-bottom: 20rpx;
+            height: 300rpx;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.752);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .item_title{
+                height: 150rpx;
+                // background-color: lawngreen;
+                max-height: 200rpx;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                >text{
+                    font-size: 40rpx;
+                    font-weight: bolder;
+                    width: 90%;
+                }
+            }
+            .item_button{
+                height: 30%;
+                display: flex;
+                >view{
+                    flex: 1;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 30rpx;
+                }
+                .btn_reply{}
+                .btn_beSame{}
+                .btn_share{
+                    font-size: 28rpx;
+                    color: rgb(144, 141, 141);
+                }
+            }
+
+        }
+    }
+}
+
+.ask_container{
+    margin-top: 90rpx;
+    height: 92.4vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(198, 198, 198, 0.204);
+    .ask_page{
+        width: 95%;
+        margin-top: 30rpx;
+        height: 80%;
+        >form{
+            .titleInpt{
+                height: 100rpx;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1rpx solid rgba(198, 198, 198, 0.519);
+                border-radius: 15rpx;
+                >input{
+                    width: 90%;
+                    height: 90%;
+                }
+            }
+            .contentInput{
+                margin-top: 30rpx;
+                height: 80%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1rpx solid rgba(198, 198, 198, 0.519);
+                border-radius: 15rpx;
+                >textarea{
+                    height: 95%;
+                    width: 95%;
+                }
+            }
+            .ask_btn{
+                width: 100%;
+                display: flex;
+                margin-top: 30rpx;
+                >button{
+                    height: 80rpx;
+                    width: 200rpx;
+                    display: flex;
+                    font-size: 35rpx;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}

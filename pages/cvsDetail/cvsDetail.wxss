@@ -1,0 +1,254 @@
+/* CDN 服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+  font-family: 'iconfont';
+  /* Project id 3606436 */
+  src: url('data:application/x-font-woff2;charset=utf-8;base64,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') format('woff2'), url('//at.alicdn.com/t/c/font_3606436_r8y71qj019i.woff?t=1682160173846') format('woff'), url('//at.alicdn.com/t/c/font_3606436_r8y71qj019i.ttf?t=1682160173846') format('truetype');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-wodezixun:before {
+  content: "\e62d";
+}
+.icon-xiaoxi:before {
+  content: "\e711";
+}
+.icon-ceshi:before {
+  content: "\e606";
+}
+.icon-sousuo:before {
+  content: "\e622";
+}
+.icon-dian-copy:before {
+  content: "\ec1f";
+  font-size: 70rpx;
+}
+.icon-chenggong:before {
+  content: "\e656";
+  font-size: 45rpx;
+}
+.icon-zuobiao:before {
+  content: "\e615";
+  font-size: 30rpx;
+}
+.icon-shijian:before {
+  content: "\e8c5";
+}
+.icon-dianzan:before {
+  content: "\e8c3";
+}
+.icon-xiaoxi1:before {
+  content: "\e8bd";
+}
+.icon-aixin:before {
+  content: "\e85c";
+}
+.icon-aixin2:before {
+  content: "\ec21";
+}
+.icon-xiaolian:before {
+  content: "\e638";
+}
+.icon-xiaolian2:before {
+  content: "\ec22";
+}
+.icon-zhengquewancheng:before {
+  content: "\e8e5";
+}
+.icon-cuowu1:before {
+  content: "\e641";
+}
+.icon-cuowuguanbiquxiao:before {
+  content: "\e8e7";
+}
+.icon-shezhi:before {
+  content: "\e64b";
+}
+scroll-view {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+scroll-view .cvs_page {
+  background-color: rgba(186, 186, 186, 0.252);
+}
+scroll-view .cvs_page .cvs_header {
+  display: flex;
+  background-color: white;
+  margin-bottom: 20rpx;
+}
+scroll-view .cvs_page .cvs_header .userImg {
+  width: 120rpx;
+  height: 120rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+scroll-view .cvs_page .cvs_header .userImg image {
+  height: 70%;
+  width: 70%;
+  border-radius: 50%;
+}
+scroll-view .cvs_page .cvs_header .cvs_container {
+  width: 82%;
+}
+scroll-view .cvs_page .cvs_header .cvs_container .cvs_title {
+  height: 150rpx;
+  display: flex;
+  align-items: center;
+}
+scroll-view .cvs_page .cvs_header .cvs_container .cvs_title > view {
+  font-size: 40rpx;
+  font-weight: bold;
+}
+scroll-view .cvs_page .cvs_header .cvs_container .cvs_detail {
+  height: 50rpx;
+  display: flex;
+  font-size: 28rpx;
+  color: rgba(141, 141, 141, 0.753);
+}
+scroll-view .cvs_page .cvs_header .cvs_container .cvs_detail .cvs_date {
+  margin-right: 40rpx;
+}
+scroll-view .cvs_page .cvs_header .cvs_container .cvs_content > view:first-child {
+  font-size: 32rpx;
+  color: #474747;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-height: 18px;
+  margin-bottom: 20rpx;
+}
+scroll-view .cvs_page .cvs_header .cvs_container .cvs_content .textBtn {
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  color: rgba(0, 0, 255, 0.475);
+  font-weight: bold;
+}
+scroll-view .cvs_page .cvs_btn {
+  height: 100rpx;
+  display: flex;
+  font-size: 32rpx;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+}
+scroll-view .cvs_page .cvs_btn > view {
+  display: flex;
+}
+scroll-view .cvs_page .cvs_btn > view > view:nth-child(1) > icon {
+  font-size: 50rpx;
+}
+scroll-view .cvs_page .cvs_btn > view > view:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+scroll-view .cvs_page .cvs_btn > view > view:nth-child(2) > view:last-child {
+  font-size: 25rpx;
+  color: rgba(156, 156, 156, 0.767);
+}
+scroll-view .cvs_page .cvs_btn .btn_toSame > view:nth-child(1) > icon {
+  font-size: 45rpx;
+}
+scroll-view .cvs_page .cvs_replyList .noreply {
+  margin-top: 20rpx;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40rpx;
+  height: 200rpx;
+  color: #c5c2c2;
+}
+scroll-view .cvs_page .cvs_replyList .reply_item {
+  margin-top: 20rpx;
+  display: flex;
+}
+scroll-view .cvs_page .cvs_replyList .reply_item .item_left {
+  width: 120rpx;
+  height: 120rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+scroll-view .cvs_page .cvs_replyList .reply_item .item_left image {
+  height: 65%;
+  width: 65%;
+  border-radius: 50%;
+}
+scroll-view .cvs_page .cvs_replyList .reply_item .item_right {
+  width: 80%;
+}
+scroll-view .cvs_page .cvs_replyList .reply_item .item_right .item_userinfo {
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+}
+scroll-view .cvs_page .cvs_replyList .reply_item .item_right .item_userinfo .user_name {
+  font-size: 35rpx;
+}
+scroll-view .cvs_page .cvs_replyList .reply_item .item_right .item_userinfo .item_date {
+  margin-left: 20rpx;
+  display: flex;
+  font-size: 25rpx;
+  color: rgba(141, 141, 141, 0.753);
+}
+scroll-view .cvs_page .cvs_replyList .reply_item .item_right .item_content {
+  margin-top: 20rpx;
+}
+scroll-view .cvs_page .cvs_replyList .reply_item .item_right .item_content > view:first-child {
+  font-size: 32rpx;
+  color: #474747;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 10;
+  line-height: 18px;
+  -webkit-box-orient: vertical;
+  margin-bottom: 20rpx;
+}
+scroll-view .cvs_page .cvs_replyList .reply_item .item_right .item_content .textBtn {
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  color: rgba(0, 0, 255, 0.475);
+  font-weight: bold;
+}
+scroll-view .cvs_page .cvs_replyList .reply_item .item_right .item_toReport {
+  height: 60rpx;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+scroll-view .cvs_page .cvs_replyList .reply_item .item_right .item_toReport > view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100rpx;
+  font-size: 30rpx;
+  border-radius: 50rpx;
+  background-color: rgba(128, 128, 128, 0.359);
+}
+.cvs_btn_Fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 9;
+}
+.cvs_btn2 {
+  height: 100rpx;
+}

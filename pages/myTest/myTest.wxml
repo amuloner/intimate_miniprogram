@@ -1,0 +1,28 @@
+<scroll-view  lower-threshold="80" scroll-top="{{scrollTop}}" scroll-y class="right_menu">
+    <view class="listContent">
+        <view 
+            class="right_item"
+            wx:for="{{testRList}}"
+            wx:key="id"
+            data-index="{{index}}"
+            bind:tap="toTestDetail"
+            >
+            <view class="evaluation_item">
+                <view class="item_left">
+                    <view class="item_left_top">
+                        <view class="item_title">{{item.test.title}}</view>
+                        <view class="item_text">{{item.test.sub_title}}</view>
+                    </view>
+                    <view class="item_left_bottom">
+                        <view class="item_likes">好评度：9000</view>
+                        <view class="item_userNum">xxx人已测</view>
+                    </view>
+                </view>
+                <view class="item_right">
+                    <view class="item_label">{{item.test.label}}</view>
+                    <image src="{{url+item.test.image}}" mode="aspectFill"/>      
+                </view>
+            </view>
+        </view>
+    </view>
+</scroll-view>

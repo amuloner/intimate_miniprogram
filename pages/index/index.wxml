@@ -1,0 +1,159 @@
+<!-- 搜索框 -->
+<myHearder></myHearder>
+<!-- 主体 -->
+<scroll-view scroll-y class="content">
+    <!-- 轮播图 -->
+    <swiper class="hot_swiper" 
+    autoplay
+    indicator-dots
+    indicator-active-color="RGB(254,222,43)"
+    >
+        <swiper-item>
+            <image class="swiper_img" src="{{url}}/images/001.jpg" mode="scaleToFill"></image>
+        </swiper-item>
+        <swiper-item>
+            <image class="swiper_img" src="{{url}}/images/002.jpg" mode="scaleToFill"></image>
+            <!-- <image class="" src="" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" /> -->
+        </swiper-item>
+        <swiper-item>
+            <image class="swiper_img" src="{{url}}/images/003.jpg" mode="scaleToFill"></image>
+        </swiper-item>
+    </swiper>
+    <!-- 快捷入口 -->
+    <view class="quickEntry">
+        <view>
+            <!-- 咨询入口 -->
+            <navigator 
+                class="entry enquiryEntry"
+                url="/pages/enquiry/enquiry"
+                hover-class="navigator-hover"
+                >
+                咨询
+            </navigator>
+            <!-- 其他入口 -->
+            <view class="entry otherEntry">
+                <navigator 
+                    class="essayEntry"
+                    url="/pages/essay/essay"
+                    hover-class="navigator-hover"
+                    >文章</navigator>
+                <navigator 
+                    class="topicEntry"
+                    url="/pages/cvsation/cvsation"
+                    hover-class="navigator-hover"
+                    >问答</navigator>
+            </view>
+        </view>
+          
+    </view>
+    <!-- 精选好文 -->
+    <view class="hot_essay">
+        <view class="hot_essay_top">
+            <view class="text">
+                <text class="texticon"></text>
+                精选<text>好文</text>
+            </view>
+            <view class="title">读有所感的精选文章</view>
+        </view>
+        <view class="hot_essay_bottom">
+            <scroll-view scroll-x>
+                <view class="listContent">
+                    <view 
+                        class="item"
+                        wx:for="{{hotEssayList}}"
+                        wx:key="id"
+                        bind:tap="toEssayDetail"
+                        data-index="{{index}}"
+                        >
+                        <view class="itemImage">
+                            <image src="{{url+item.smallImg}}" mode="scaleToFill"/>
+                            <view>{{item.readNum}}人已看</view>
+                        </view>
+                        <view class="itemTitle">
+                            <text>{{item.title}}</text>
+                        </view>
+                    </view>
+                </view> 
+            </scroll-view>
+        </view>
+    </view>
+
+    <!-- 热门讨论、资深咨询师 -->
+
+    <!-- 推荐自评 -->
+    <view class="person_evaluation">
+        <view class="person_evaluation_top">
+            <view class="text">
+                <text class="texticon"></text>
+                推荐<text>自评</text>
+            </view>
+            <view class="title">令人认可的自评测试</view>
+        </view>
+        <view class="py_container">
+            <view 
+                wx:for="{{hotTestList}}"
+                wx:key="id"
+                data-index="{{index}}"
+                bind:tap="toTestDetail"
+            >
+                <view class="evaluation_item">
+                    <view class="item_left">
+                        <view class="item_left_top">
+                            <view class="item_title">{{item.title}}</view>
+                            <view class="item_text">{{item.sub_title}}</view>
+                        </view>
+                        <view class="item_left_bottom">
+                            <view class="item_likes">好评度：9000</view>
+                            <view class="item_userNum">xxx人已测</view>
+                        </view>
+                    </view>
+                    <view class="item_right">
+                        <view class="item_label">{{item.label}}</view>
+                        <image src="{{url+item.image}}" mode="aspectFill"/>      
+                    </view>
+                </view>
+            </view>
+            <!-- <view>
+                <view class="evaluation_item">
+                    <view class="item_left">
+                        <view class="item_left_top">
+                            <view class="item_title">测测你的抑郁有多深？</view>
+                            <view class="item_text">抑郁测试[专业版]</view>
+                        </view>
+                        <view class="item_left_bottom">
+                            <view class="item_likes">好评度：9000</view>
+                            <view class="item_userNum">xxx人已测</view>
+                        </view>
+                    </view>
+                    <view class="item_right">
+                        <image src="{{url}}/images/006.jpg" mode="aspectFill"/>      
+                        <view class="item_label">性格</view>
+                    </view>
+                </view>
+            </view>
+            <view>
+                <view class="evaluation_item">
+                    <view class="item_left">
+                        <view class="item_left_top">
+                            <view class="item_title">测测你的抑郁有多深？</view>
+                            <view class="item_text">抑郁测试[专业版]</view>
+                        </view>
+                        <view class="item_left_bottom">
+                            <view class="item_likes">好评度：9000</view>
+                            <view class="item_userNum">xxx人已测</view>
+                        </view>
+                    </view>
+                    <view class="item_right">
+                        <view class="item_label">性格</view>
+                        <image src="{{url}}/images/006.jpg" mode="aspectFill"/>      
+                    </view>
+                </view>
+            </view> -->
+        </view>
+        <view class="footer" bind:tap="toTestPage">
+            查看更多
+            <text>></text>  
+        </view>
+          
+    </view>
+</scroll-view>

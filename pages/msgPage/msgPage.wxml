@@ -1,0 +1,40 @@
+<myNav navbar-data='{{nvabarData}}'></myNav>
+<view class="msgPage" style='margin-top: {{height}}px; height="{{pageHeight - height}}"' >
+  <scroll-view 
+    scroll-y 
+    scroll-into-view="{{toView}}"
+    >
+    <block wx:for="{{msgList}}" wx:key="id">
+        <!-- 我方 -->
+        <view class="msgItem" wx:if="{{item.fromId == fromId}}">
+            <view class="msgDate" style="display: {{!item.showTime ? 'none' : 'flex'}}">{{item.showTime}}</view>
+            <view class="msgDetail" style="justify-content: flex-end">
+                <view class="msgContent">
+                    <view style="border-radius: 15rpx 5rpx 15rpx 15rpx">{{item.content}}</view>
+                </view>
+                <view class="msgUser">
+                    <image src="{{url+fromHeadImg}}" mode="aspectToFill"/>
+                </view>
+            </view>
+            <view id="item{{index}}"></view>
+        </view>
+        <!-- 对方 -->
+        <view class="msgItem" wx:else>
+            <view class="msgDate" style="display: {{!item.showTime ? 'none' : 'flex'}}">{{item.showTime}}</view>
+            <view class="msgDetail">
+                <view class="msgUser">
+                    <image src="{{url+toHeadImg}}" mode="aspectToFill"/>
+                </view>
+                <view class="msgContent">
+                    <view>{{item.content}}</view>
+                </view>
+            </view>
+            <view id="item{{index}}"></view>
+        </view>
+    </block>
+  </scroll-view>
+  <view class="footerInput">
+    <input type="text" value="{{content}}" bindblur="changeContent"/>
+    <button bind:tap="sendMessage">发送</button>
+  </view>
+</view>

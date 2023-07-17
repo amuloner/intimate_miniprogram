@@ -1,0 +1,25 @@
+<view class="regist_page" style="background-image:url({{back_img}})">
+    <view class="content">
+        <form class="loginForm" bindsubmit="toRegist">
+            <button 
+                class="avatar-wrapper" 
+                open-type="chooseAvatar"
+                bind:chooseavatar="onChooseAvatar"
+                >
+                <image class="avatar" mode="scaleToFill" src="{{avatarUrl}}"></image>
+            </button> 
+            <view class="textInput">
+                <label for="nickname">昵称</label>
+                <input 
+                    id="nickname" 
+                    type="nickname" 
+                    class="nickname" 
+                    placeholder="请输入昵称"
+                    bindblur="checkNickname"
+                    />
+            </view>
+            <button class="button registBtn" type="primary" hover-class="button-hover" form-type="submit">注册</button>
+        </form>
+        
+    </view>
+</view>

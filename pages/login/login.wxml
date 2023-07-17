@@ -1,0 +1,14 @@
+<view class="login_page" style="background-image:url({{back_img}})">
+    <view class="content">
+        <view class="log">
+            <image class="appLog" src="{{log_img}}" mode="aspectFit" />
+            <text class="appTitle">知心</text>
+        </view>
+        <view class="btn">
+            <button class="loginBtn" type="primary" 
+                bindtap="toLogin">
+                登录/注册
+            </button>
+        </view>
+    </view>
+</view>

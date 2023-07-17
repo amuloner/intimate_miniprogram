@@ -1,0 +1,18 @@
+<myNav navbar-data='{{nvabarData}}'></myNav>
+<view class="ans_container" style='margin-top: {{height}}px; height="{{pageHeight - height}}"' >
+    <view class="ans_page">
+        <form catchsubmit="formSubmit" catchreset="formReset">
+            <view class="contentInput">
+                <textarea
+                name="content" 
+                placeholder="每次真诚的回应，都是爱与勇气的传递..."
+                placeholder-style="font-size: 32rpx"
+                />
+            </view>
+            <view class="ask_btn">
+                <button type="primary" formType="submit">完成</button>
+                <button formType="reset">重置</button>
+            </view>
+        </form>
+    </view>
+</view>

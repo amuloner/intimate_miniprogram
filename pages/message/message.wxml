@@ -1,0 +1,49 @@
+<view class="page_msg">
+    <view class="msg_nav">
+        <view class="msg_nav_title">消息</view>
+        <!-- <view class="msg_nav_button">清空</view> -->
+    </view>
+    <scroll-view class="msg_content" scroll-y="{{true}}">
+        <!-- <view class="msg_item">
+            <view>
+                <view class="item_left">
+                    <image src="../../images/004.jpg" mode="aspectFill"/>
+                </view>
+                <view class="item_middle">
+                    <view class="msg_name">系统消息</view>
+                    <view class="new_msg">
+                        <text>你好，很高兴能与你开启沟通，如若我刚好不在，请留言！</text>    
+                    </view>
+                          
+                </view>
+                <view class="item_right">
+                    <view class="msg_time">6/29</view>
+                    <view class="msg_status"></view>
+                </view>
+            </view>
+        </view> -->
+        <view class="msg_item" 
+            wx:for="{{chatList}}"
+            wx:key="id"
+            data-index="{{index}}"
+            bind:tap="toMsgPage"
+            >
+            <view>
+                <view class="item_left">
+                    <image src="{{url+item.toHead}}" mode="aspectFill"/>
+                </view>
+                <view class="item_middle">
+                    <view class="msg_name">{{item.toName}}</view>
+                    <view class="new_msg">
+                        <text>{{item.lastChat.content}}</text>    
+                    </view>
+                          
+                </view>
+                <view class="item_right">
+                    <view class="msg_time">{{item.lastChat.ctime}}</view>
+                    <view class="msg_status"></view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+</view>

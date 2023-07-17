@@ -1,0 +1,79 @@
+.msgPage {
+  position: relative;
+  height: 89.5vh;
+}
+.msgPage > scroll-view {
+  background-color: rgba(220, 220, 220, 0.421);
+  height: 93%;
+}
+.msgPage > scroll-view .msgItem {
+  width: 100%;
+  margin-top: 15rpx;
+}
+.msgPage > scroll-view .msgItem .msgDate {
+  height: 60rpx;
+  width: 100%;
+  color: #9a9898;
+  font-size: 25rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.msgPage > scroll-view .msgItem .msgDetail {
+  display: flex;
+  justify-content: flex-start;
+}
+.msgPage > scroll-view .msgItem .msgDetail .msgUser {
+  height: 120rpx;
+  width: 120rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.msgPage > scroll-view .msgItem .msgDetail .msgUser > image {
+  height: 70%;
+  width: 70%;
+  border-radius: 50%;
+  background-color: gray;
+}
+.msgPage > scroll-view .msgItem .msgDetail .msgContent {
+  max-width: 55%;
+  display: flex;
+  align-items: center;
+}
+.msgPage > scroll-view .msgItem .msgDetail .msgContent > view {
+  min-height: 50rpx;
+  min-width: 60rpx;
+  padding: 15rpx;
+  background-color: white;
+  border-radius: 5rpx 15rpx 15rpx;
+  font-size: 32rpx;
+}
+.msgPage .footerInput {
+  height: 7%;
+  display: flex;
+  background-color: rgba(220, 220, 220, 0.8);
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.msgPage .footerInput > input {
+  background-color: white;
+  margin-left: 50rpx;
+  height: 85%;
+  width: 70%;
+  border-radius: 12rpx;
+}
+.msgPage .footerInput > button {
+  height: 70rpx;
+  width: 120rpx;
+  font-size: 30rpx;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0rpx 5rpx 10rpx #a2a1a1;
+  background-color: #ade63c;
+}

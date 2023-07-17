@@ -1,0 +1,64 @@
+
+.hearder{
+    height: 80rpx;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    .hearder_left{
+        flex: 4;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        .log{
+            margin-left: 40rpx;
+            height: 90%;
+            width: 40%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            .appLog{
+                height: 80rpx;
+                width: 90rpx;
+            }
+            .appTitle{
+                color: #fff;
+                font-size: 55rpx;
+                font-family:'华文新魏';
+            }
+        }
+    }
+    .hearder_right{
+        flex: 2;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        // background-color:aqua;
+        .search_row{
+            display: flex;
+            height: 75%;
+            width: 90%;
+            border-radius: 50rpx;
+            background-color: #fff;
+            .myIcon{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                flex: 2;
+                padding-left: 10rpx;
+            }
+            .search_input{
+                flex: 5;
+                font-size: 30rpx;
+                padding-left: 20rpx;
+                border-radius: 0 50rpx 50rpx 0;
+                height: 100%;
+            }
+        }
+    }
+}

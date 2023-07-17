@@ -1,0 +1,144 @@
+<!-- 选项 -->
+<view class="nav">
+  <view class="nav_list">
+    <!-- 城市 -->
+    <view class="nav-child borders {{city_open? 'nav_active' : ''}}"
+    bindtap="tapCityNav"
+    data-nav="1">
+      <!-- <text class="iconfont icon-tianqi"></text> -->
+      <view class="nav-title">{{dropDownMenuTitle[0]}}</view>
+      <view class="icon"></view>
+    </view>
+  
+    <!-- 时间 -->
+    <view class="nav-child borders {{date_open? 'nav_active' : ''}}" 
+      bindtap="tapDateNav" 
+      data-nav="2">
+      <!-- <text class="iconfont icon-leixing"></text> -->
+      <view class="nav-title">{{dropDownMenuTitle[1]}}</view>
+      <view class="icon"></view>
+    </view>
+  
+  
+    <!-- 排序 -->
+    <view class="nav-child borders {{sort_open ? 'nav_active' : ''}}" bindtap="tapSortNav" data-nav="3">
+      <!-- <text class="iconfont icon-xingchengdan"></text> -->
+      <view class="nav-title">{{dropDownMenuTitle[2]}}</view>
+      <view class="icon"></view>
+    </view>
+  
+    <!-- 筛选 -->
+    <view class="nav-child borders {{other_open ? 'nav_active' : ''}}" bindtap="tapOtherNav" data-nav="4">
+      <!-- <text class="iconfont icon-xingchengdan"></text> -->
+      <view class="nav-title">{{dropDownMenuTitle[3]}}</view>
+      <view class="icon"></view>
+    </view>
+  </view>
+
+  <!-- 内容框 -->
+  <view class="nav_content" hidden="{{!lid_open}}" bindtap="close_lib">
+    <!-- 城市选择器 省、市、区 -->
+    <view hidden="{{!city_open}}" class="nav_container con_city" catch:tap="util_fun">
+      <view class="con_city_top">
+        <!-- 省 -->
+        <view class="city_province">
+          <scroll-view scroll-y>
+            <block wx:for="{{cityList}}" wx:key="code">
+              <view class="select_name province_name"
+              catch:tap="selectPro" 
+              data-province="{{item}}">
+                <view class="{{item.code == select_province.code ? 'city_active' : ''}}">{{item.value}}</view>
+              </view>
+            </block>
+          </scroll-view>
+        </view>
+        <!-- 市 -->
+        <view class="city_city">
+          <scroll-view scroll-y wx:if="{{select_province.code}}">
+            <block wx:for="{{select_province.children}}" wx:key="code">
+              <view class="select_name city_name"
+              catch:tap="selectCity"
+              data-city="{{item}}">
+                <view class="{{item.code == select_city.code ? 'city_active' : ''}}">{{item.value}}</view>
+              </view>
+            </block>
+          </scroll-view>
+          <view class="common_font" wx:else>不限</view>
+        </view>
+        <!-- 区 -->
+        <view class="city_regional">
+          <scroll-view scroll-y wx:if="{{select_city.code}}">
+            <block wx:for="{{select_city.children}}" wx:key="code">
+              <view class="select_name regional_name"
+              catch:tap="selectRegi"
+              data-regional="{{item}}">
+                <view class="{{item.code == select_regional.code ? 'city_active' : ''}}">{{item.value}}</view>
+              </view>
+            </block>
+          </scroll-view>
+          <view class="common_font" wx:else>不限</view>
+        </view>
+      </view>
+      <view class="con_city_bottom">
+        <view class="city_submit" bind:tap="city_submit">确定</view>
+        <view class="city_close" bind:tap="city_reset">不限城市</view>
+      </view>
+    </view>
+    <!-- 时间选择器 -->
+    <view hidden="{{!date_open}}" class="nav_container con_date" catch:tap="util_fun">
+      <view class="con_date_top">
+        <view class="date_label">咨询时间（北京时间，可多选）</view>
+        <view class="date_box">
+          <view class="date_box_child {{item.id == select_date.id ? 'date_active' : ''}}" wx:for="{{dates}}" wx:key="title" bind:tap="selectDate" data-date="{{item}}">
+            <view>{{item.title}}</view>
+            <view>{{item.week}}</view>
+          </view>
+        </view>
+      </view>
+      <view class="con_date_bottom">
+        <view class="date_close" bind:tap="date_reset">重置</view>
+        <view class="date_submit" bind:tap="date_submit">确定</view>
+      </view>
+    </view>
+    <!-- 排序选择器 -->
+    <view hidden="{{!sort_open}}" class="nav_container con_sort" catch:tap="util_fun">
+      <view class="con_sort_top">
+        <view class="sort_label">排序方式</view>
+        <view class="sort_box">
+          <view class="sort_box_child {{item.id == select_sort.id ? 'sort_active' : ''}}" wx:for="{{sort_array}}" wx:key="title" bind:tap="selectSort" data-sort="{{item}}">
+            <view>{{item.title}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 筛选选择器 -->
+    <view hidden="{{!other_open}}" class="nav_container con_select" catch:tap="util_fun">
+      <view class="con_select_top">
+        <scroll-view scroll-y="{{true}}">
+          <view class="select_child">
+            <view class="select_label">咨询师性别</view>
+            <view class="select_box">
+              <view class="select_box_child {{item.id == select_gender.id ? 'select_active' : ''}}" wx:for="{{gender_array}}" wx:key="title" bind:tap="selectGender" data-gender="{{item}}">
+                <view>{{item.title}}</view>
+              </view>
+            </view>
+          </view>
+          <view class="select_child">
+            <view class="select_label">擅长领域</view>
+            <view class="select_box">
+              <view class="select_box_child {{item.id == select_realm.id ? 'select_active' : ''}}" wx:for="{{realm_array}}" wx:key="title" bind:tap="selectRealm" data-realm="{{item}}">
+                <view>{{item.title}}</view>
+              </view>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+      <view class="con_select_bottom">
+        <view class="select_close" bind:tap="select_reset">重置</view>
+        <view class="select_submit" bind:tap="select_submit">确定</view>
+      </view>
+    </view>
+      
+  </view>
+</view>
+

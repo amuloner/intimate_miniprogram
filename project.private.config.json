@@ -1,0 +1,119 @@
+{
+  "projectname": "intimate_miniprogram",
+  "setting": {
+    "compileHotReLoad": true,
+    "urlCheck": false
+  },
+  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "评测页面",
+          "pathName": "pages/testPage/testPage",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "消息",
+          "pathName": "pages/message/message",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "咨询",
+          "pathName": "pages/enquiry/enquiry",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "咨询师详情",
+          "pathName": "pages/conDetail/conDetail",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "文章",
+          "pathName": "pages/essay/essay",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "文章详情",
+          "pathName": "pages/essayDetail/essayDetail",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "个人",
+          "pathName": "pages/person/person",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "问答",
+          "pathName": "pages/cvsation/cvsation",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "问答详情",
+          "pathName": "pages/cvsDetail/cvsDetail",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "登录",
+          "pathName": "pages/login/login",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "注册",
+          "pathName": "pages/regist/regist",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "评测界面",
+          "pathName": "pages/testDetail/testDetail",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "消息界面",
+          "pathName": "pages/msgPage/msgPage",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "问题回复页面",
+          "pathName": "pages/cvsAnswer/cvsAnswer",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "搜索页面",
+          "pathName": "pages/searchPage/searchPage",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

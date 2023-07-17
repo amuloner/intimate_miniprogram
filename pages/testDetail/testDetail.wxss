@@ -1,0 +1,145 @@
+.page {
+  height: 100vh;
+  background-color: rgba(209, 209, 209, 0.262);
+}
+.page .test_title {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.page .test_info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.page .test_info .test_direction {
+  width: 95%;
+  font-size: 35rpx;
+  min-height: 45vh;
+}
+.page .test_info .test_btn {
+  width: 100%;
+  margin-top: 200rpx;
+}
+.page .test_info .test_btn > button {
+  height: 80rpx;
+  background-color: #e8e800;
+  font-size: 35rpx;
+  font-weight: normal;
+}
+.page .test_doing {
+  width: 100%;
+  height: 90%;
+}
+.page .test_doing .test_ques {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page .test_doing .test_ques .progress {
+  width: 100%;
+  height: 50rpx;
+}
+.page .test_doing .test_ques .item {
+  background-color: white;
+  width: 90%;
+  box-shadow: 0rpx 0.1rpx 50rpx rgba(138, 138, 138, 0.484);
+  border-radius: 10rpx;
+  display: flex;
+  justify-content: center;
+  height: 75%;
+  align-items: flex-end;
+}
+.page .test_doing .test_ques .item .section {
+  width: 80%;
+  height: 95%;
+  position: relative;
+}
+.page .test_doing .test_ques .item .section .section-title {
+  height: 15%;
+  font-size: 35rpx;
+}
+.page .test_doing .test_ques .item .section .section-cells .section-cell {
+  border-bottom: 1rpx solid rgba(0, 0, 0, 0.074);
+  display: flex;
+  justify-content: space-between;
+  height: 85rpx;
+  align-items: center;
+}
+.page .test_doing .test_ques .item .section .section-cells .section-cell .section-cell-left {
+  display: flex;
+  align-items: center;
+  font-size: 32rpx;
+}
+.page .test_doing .test_ques .item .section .section-cells .section-cell .section-cell-left .left__bd {
+  margin-left: 30rpx;
+}
+.page .test_doing .test_ques .item .section .section-cells .section-cell .section-cell-right {
+  width: 100rpx;
+}
+.page .test_doing .test_ques .item .section .section-preBtn {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+.page .test_doing .test_ques .item .section .section-preBtn > button {
+  width: 45%;
+  height: 85rpx;
+  background-color: #ffbf49;
+  color: white;
+  font-weight: normal;
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page .test_doing .test_ques .item .section .section-preBtn .preBtn {
+  width: 90%;
+}
+.page .test_doing .test_ques .footer {
+  height: 12%;
+  font-size: 45rpx;
+  display: flex;
+  align-items: flex-end;
+  color: #818181;
+}
+.page .test_result {
+  display: flex;
+  justify-content: center;
+}
+.page .test_result > view {
+  width: 90%;
+}
+.page .test_result > view > view:first-child > view:first-child {
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  font-size: 45rpx;
+}
+.page .test_result > view > view:first-child > view:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  color: #e2e224;
+  font-size: 100rpx;
+}
+.page .test_result > view > view:first-child > view:last-child {
+  font-size: 32rpx;
+  margin-right: 50rpx;
+}
+.page .test_result > view > view:last-child {
+  margin-top: 50rpx;
+  text-indent: 20px;
+  font-size: 35rpx;
+  line-height: 60rpx;
+}

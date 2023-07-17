@@ -1,0 +1,17 @@
+<view class='com_selectBox'>
+    <view class='com_sContent' bindtap='selectToggle'>
+        <view class='com_sTxt'>{{nowText}}</view>
+        <view class="{{selectShow?'com_icon2':'com_icon'}}"></view>
+    </view> 
+    <view class='com_sList' wx:if="{{selectShow}}">
+        <view  
+        class="com_sItem {{index === currentIndex?'com_sItem_active':''}}" 
+        wx:for="{{propArray}}" 
+        data-index="{{index}}" 
+        wx:key='id' 
+        bind:tap='setText'>
+          {{item.text}}
+          <text class="{{index === currentIndex?'iconfont icon-chenggong':'sItem_icon' }}"></text>
+        </view>
+    </view>
+</view>

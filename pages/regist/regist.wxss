@@ -1,0 +1,53 @@
+.regist_page {
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+}
+.regist_page .content {
+  width: 80vw;
+  height: 40vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.regist_page .content .loginForm {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.regist_page .content .loginForm .avatar-wrapper {
+  background-color: transparent;
+  width: 120rpx;
+  height: 120rpx;
+  padding: 0;
+}
+.regist_page .content .loginForm .avatar-wrapper .avatar {
+  height: 100%;
+  width: 100%;
+  border-radius: 20rpx;
+}
+.regist_page .content .loginForm .textInput {
+  height: 130rpx;
+  display: flex;
+  align-items: center;
+}
+.regist_page .content .loginForm .textInput > label {
+  margin-right: 50rpx;
+}
+.regist_page .content .loginForm .textInput .nickname {
+  display: inline-block;
+  font-size: 35rpx;
+}
+.regist_page .content .loginForm .registBtn {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+}

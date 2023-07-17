@@ -1,0 +1,105 @@
+.page_msg {
+  background-color: white;
+}
+.page_msg .msg_nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  height: 100rpx;
+  background-color: rgba(161, 161, 161, 0.1);
+}
+.page_msg .msg_nav > view {
+  display: flex;
+  align-items: center;
+  padding-left: 35rpx;
+}
+.page_msg .msg_nav .msg_nav_title {
+  height: 100%;
+  flex: 5;
+  font-size: 45rpx;
+  color: #758cfa;
+  text-shadow: 1rpx 1rpx 35rpx #758cfa;
+}
+.page_msg .msg_nav .msg_nav_button {
+  height: 100%;
+  flex: 1;
+  font-size: 30rpx;
+  color: red;
+}
+.page_msg .msg_content {
+  height: 90.8vh;
+}
+.page_msg .msg_content .msg_item {
+  height: 150rpx;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.page_msg .msg_content .msg_item > view {
+  width: 95%;
+  height: 85%;
+  display: flex;
+  justify-content: start;
+}
+.page_msg .msg_content .msg_item > view .item_left {
+  flex: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page_msg .msg_content .msg_item > view .item_left > image {
+  height: 70%;
+  width: 70%;
+  border-radius: 10rpx;
+}
+.page_msg .msg_content .msg_item > view .item_middle {
+  flex: 4;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  font-family: "黑体";
+}
+.page_msg .msg_content .msg_item > view .item_middle > view {
+  display: flex;
+}
+.page_msg .msg_content .msg_item > view .item_middle .msg_name {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  font-size: 35rpx;
+}
+.page_msg .msg_content .msg_item > view .item_middle .new_msg {
+  flex: 1;
+  width: 100%;
+  font-size: 35rpx;
+  display: flex;
+  align-items: center;
+}
+.page_msg .msg_content .msg_item > view .item_middle .new_msg > text {
+  font-size: 28rpx;
+  color: rgba(0, 0, 0, 0.497);
+  width: 459rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.page_msg .msg_content .msg_item > view .item_right {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.page_msg .msg_content .msg_item > view .item_right .msg_time {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex: 1;
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 25rpx;
+  font-weight: bolder;
+}
+.page_msg .msg_content .msg_item > view .item_right .msg_status {
+  flex: 1;
+}

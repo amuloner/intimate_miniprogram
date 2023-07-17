@@ -1,0 +1,141 @@
+.intro_page{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(221, 221, 221);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .intro_page_content{
+        margin-top: 40rpx;
+        height: 50%;
+        width: 80%;
+        background-color: white;
+        border-radius: 20rpx;
+        .content_top{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .title{
+                height: 150rpx;
+                display: flex;
+                align-items: center;
+                font-weight: bold;
+            }
+            .content{
+                width: 95%;
+                display: flex;
+                justify-content: center;
+                flex: 3;
+                font-size: 34rpx;
+                text-indent: 70rpx;
+                line-height: 80rpx;
+            }
+        }
+        .content_bottom{}
+    }
+    .intro_page_btn{
+        margin-top: 20rpx;
+        height: 120rpx;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        >view{
+            height: 80rpx;
+            width: 300rpx;
+            background-color: rgb(31, 177, 244);
+            border-radius: 12rpx;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+.form_page{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .form_userinfo{
+        width: 100%;
+        height: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .userImg{
+            >image{
+                height: 150rpx;
+                width: 150rpx;
+                border-radius: 12rpx;
+            }
+        }
+        .username{
+            font-size: 36rpx;
+            color: rgb(165, 165, 165);
+        }
+    }
+    .form_page_content{
+        margin-top: 20rpx;
+        width: 95%;
+        .form_input{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1rpx solid rgb(185, 185, 185);
+            height: 80rpx;
+            .form_input_title{
+
+            }
+            .form_input_text{
+                width: 70%;
+                >input{
+                    font-size: 32rpx;
+                }
+            }
+        }
+        .form_file{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1rpx solid rgb(185, 185, 185);
+            height: 100rpx;
+            .form_file_title{
+            }
+            .form_file_name{
+                width: 300rpx;
+                margin-left: 50rpx;
+                font-size: 30rpx;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+            .form_file_name:hover{
+                overflow: visible;
+            }
+            .form_file_text{
+                width: 200rpx;
+                display: flex;
+                justify-content: center;
+                .file_choose{
+                    border-radius: 12rpx;
+                    background-color: #E7E7E7;
+                    width: 100rpx;
+                    height: 60rpx;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 32rpx;
+                }
+            }
+        }
+        .from_btn{
+            position: absolute;
+            bottom: 18%;
+            left: 50%;
+            transform: translate(-50%);
+        }
+    }
+}

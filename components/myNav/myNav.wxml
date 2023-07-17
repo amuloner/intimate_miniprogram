@@ -1,0 +1,17 @@
+<view 
+  class="nav-wrap" 
+  style='height: {{statusBarHeight + navBarHeight}}px;'>
+  <view class="mynav" style='margin-top: {{statusBarHeight}}px; height: {{navBarHeight}}px;'>
+    <view 
+      class='nav-capsule' 
+      bindtap='_navback'>
+      <view class="back-pre"></view>
+    </view>
+    <view 
+      class='nav-title' 
+      style='margin-top: {{statusBarHeight}}px;'>
+      <view>{{navbarData.title}}</view>
+      <view class="status" wx:if="{{navbarData.showCapsule}}">离线</view>
+    </view>
+  </view>
+</view>

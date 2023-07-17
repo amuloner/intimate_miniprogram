@@ -1,0 +1,84 @@
+<!-- 导航列表 -->
+<view class="nav">
+  <!-- 天气 -->
+  <view class="nav-child borders {{weather_open? 'active' : ''}}" bindtap="tapWeatherNav"  data-nav="1">
+    <text class="iconfont icon-tianqi"></text>
+    <view class="nav-title">{{dropDownMenuTitle[0]}}</view>
+    <view class="icon"></view>
+  </view>
+
+  <!-- 类型 -->
+  <view class="nav-child  {{type_open? 'active' : ''}}" bindtap="tapTypeNav" data-nav="2">
+    <text class="iconfont icon-leixing"></text>
+    <view class="nav-title">{{dropDownMenuTitle[1]}}</view>
+    <view class="icon"></view>
+  </view>
+
+
+  <!-- 已选 -->
+  <view class="nav-child {{preSelection_open ? 'active' : ''}}" bindtap="tapSelectionNav" data-nav="4">
+    <text class="iconfont icon-xingchengdan"></text>
+    <view class="nav-title">{{dropDownMenuTitle[2]}}</view>
+    <view class="icon"></view>
+  </view>
+</view>
+
+
+<!-- 天气块内容 -->
+<view class="container container_hd {{weather_open ? 'show' : 'disappear'}} ">
+  <view class="weatherTitle">未来十五天天气状况一览</view>
+  <view class="cityWeather">
+    <block wx:for="{{dropDownMenuWeatherData}}"
+    wx:key="week"
+    >
+        <view class="weather_item">
+            <view class="weather_item_date">{{item.date}}</view>
+            <view class="weather_item_week">星期{{item.week}}</view>
+            <view class="weather_icon">
+              <image mode="heightFix" src="{{item.day_weather_pic}}"/>
+            </view>
+            <view class="dayweather">{{item.dayweather===item.nightweather?item.dayweather:item.dayweather+"转"+item.nightweather}}</view>
+        </view>
+    </block>
+  </view>
+</view>
+
+<!-- 类型块内容 -->
+<view class="container container_hd {{type_open ? 'show' : 'disappear'}} ">
+  <view class="typeMenu">
+    <block wx:for="{{dropDownMenuTypeData}}"
+      wx:key="index"
+    >
+      <view class="type_item">
+        <checkbox-group bindchange="handleTypeItemChange" data-index="{{item.index}}">
+          <checkbox checked="{{item.isChecked}}"  color="red"/>
+        </checkbox-group>
+        <text >{{item.title}}</text>
+      </view>
+    </block>
+  </view>
+</view>
+
+<!-- 已选块内容 -->
+<view class="container container_hd {{preSelection_open ? 'show' : 'disappear'}} ">
+  <view class="selectMenu">
+    <block wx:for="{{dropDownMenuSelectionData}}"
+      wx:key="att_id"
+    >
+      <view class="att_item">
+        <view class="att_left">
+          <view class="att_content">
+            {{item.att_name}}
+          </view>
+        </view>
+        <view class="att_right">
+          <view class="att_delete" data-att_id="{{item.att_id}}" bind:tap="deleteSelection">删除</view>
+        </view>
+      </view>
+    </block>
+    <view class="select_hint" hidden="{{!(dropDownMenuSelectionData.length===0)}}">您还未选择景点！！！</view>
+    <view class="select_footer" hidden="{{dropDownMenuSelectionData.length===0}}">
+      <view class="getPlan" bind:tap="getPlan">生成规划 》》</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,360 @@
+@import url(../../fonts/myfonts/iconfont.wxss);
+scroll-view{
+    height: 92vh;
+    .essay_title{
+        font-size: 45rpx;
+        font-weight: bold;
+        height: 100rpx;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .essay_userdata{
+        height: 150rpx;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .userdata{
+            width: 95%;
+            height: 75%;
+            display: flex;
+            align-items: center;
+            .data_left{
+                display: flex;
+                height: 100%;
+                .data_image{
+                    height: 100rpx;
+                    width: 100rpx;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    image{
+                        width: 90%;
+                        height: 90%;
+                        border-radius: 50%;
+                    }
+                }
+                .data_detail{
+                    margin-left: 20rpx;
+                    .date_name{
+                        display: flex;
+                        align-items: center;
+                        height: 60rpx;
+                        font-size: 30rpx;
+                    }
+                    .data_lable{
+                        font-size: 25rpx;
+                        color: rgba(0, 0, 0, 0.49);     
+                    }
+                }
+            }
+        }
+    }
+    .essay_content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .essay_detail{
+            width: 95%;
+            text-indent: 60rpx;
+            font-size: 30rpx;
+            line-height: 60rpx;
+        }
+        .essay_footer{
+            width: 95%;
+            height: 80rpx;
+            font-size: 28rpx;
+            display: flex;
+            align-items: center;
+            color: rgba(0, 0, 0, 0.67);
+        }
+        .essay_comment{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            .comment_title{
+                width: 100%;
+                height: 100rpx;
+                display: flex;
+                align-items: center;
+                text-indent: 10rpx;
+                font-size: 40rpx;
+                border-bottom: 1rpx solid rgba(0, 0, 0, 0.356);
+                >icon{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 45rpx;
+                    margin-right: 10rpx;
+                }
+            }
+            .comment_item{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                .item{
+                    width: 95%;
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 20rpx;
+                    .item_left{
+                        flex: 1;
+                        height: 108rpx;
+                        display: flex;
+                        justify-content: center;
+                        image{
+                            height: 70%;
+                            width: 70%;
+                            border-radius: 50%;
+                        }
+                    }
+                    .item_right{
+                        flex: 5;
+                        .item_name{
+                            color: RGB(95,103,113);
+                            height: 80rpx;
+                            display: flex;
+                            align-items: center;
+                            font-size: 32rpx;
+                        }
+                        .item_comment{
+                            font-size: 32rpx;
+                        }
+                        .item_footer{
+                            height: 80rpx;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            color: rgba(166,167,171);
+                            .item_footer_date{
+                                font-size: 28rpx;
+                            }
+                            .item_footer_toReplay{
+                                font-size: 28rpx;
+                                display: flex;
+                                >icon{
+                                    margin-left: 10rpx;
+                                    font-size: 35rpx;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                }
+                            }
+                        }
+                        .item_reply{
+                            border-top: 1rpx solid rgba(166,167,171,0.5);
+                            width: 100%;
+                            >view{
+                                margin-top: 10rpx;
+                                display: flex;
+                                justify-content: center;
+                                width: 100%;
+                                .reply_left{
+                                    flex: 1;
+                                    height: 108rpx;
+                                    image{
+                                        height: 70rpx;
+                                        width: 70rpx;
+                                        border-radius: 50%;
+                                    }
+                                }
+                                .reply_right{
+                                    flex: 5;
+                                    .reply_name{
+                                        color: RGB(95,103,113);
+                                        height: 80rpx;
+                                        display: flex;
+                                        align-items: center;
+                                        font-size: 28rpx;
+                                        display: flex;
+                                        >text:nth-child(2){
+                                            margin: 0 25rpx 0;
+                                            font-weight: bolder;
+                                            color: black;
+                                        }
+                                        .to_user{
+                                            height: 100%;
+                                            display: flex;
+                                            align-items: center;
+                                           .to_user_image{
+                                            height: 80rpx;
+                                            width: 100rpx;
+                                            display: flex;
+                                            justify-content: center;
+                                                image{
+                                                    height: 60rpx;
+                                                    width: 60rpx;
+                                                    border-radius: 50%;
+                                                }
+                                           }
+                                            .to_user_name{}
+                                        }
+                                    }
+                                    .reply_comment{
+                                        font-size: 32rpx;
+                                    }
+                                    .reply_footer{
+                                        height: 80rpx;
+                                        display: flex;
+                                        align-items: center;
+                                        color: rgba(166,167,171);
+                                        justify-content: space-between;
+                                        .reply_footer_date{
+                                            font-size: 28rpx;
+                                        }
+                                        .reply_footer_toReplay{
+                                            font-size: 28rpx;
+                                            display: flex;
+                                            >icon{
+                                                margin-left: 10rpx;
+                                                font-size: 35rpx;
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        >view:last-child{
+            height: 180rpx;
+            width: 100%;
+            text-align: center;
+            line-height: 120rpx;
+            color: rgba(0, 0, 0, 0.316);
+            font-size: 30rpx;
+            background-color: rgba(128, 128, 128, 0.188);
+        }
+    }
+}
+
+.page_footer{
+    height: 8vh;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color:white;
+    display: flex;
+    align-items: center;
+    >view{
+        height: 70%;
+        width: 100%;
+        display: flex;
+        .comment_input{
+            height: 100%;
+            display: flex;
+            flex: 1.2;
+            align-items: center;
+            justify-content: center;
+            >input{
+                width: 90%;
+                height: 100%;
+                border-radius: 50rpx;
+                background-color: rgba(188, 188, 188, 0.3);
+            }
+        }
+        .comment_button{
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            >icon{
+                // flex: 1;
+                font-size: 45rpx;
+            }
+            .icon-aixin1{
+                // flex: 2;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+            }
+            .icon-xiaoxi1{
+                width: 100rpx;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+
+}
+
+.myCover{
+    background-color: rgba(0, 0, 0, 0.314);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    z-index: 3;
+    .myInput{
+        margin-top: 80rpx;
+        height: 350rpx;
+        width: 100%;    
+        background-color: rgb(220, 220, 220);
+        .myInput_header{
+            display: flex;
+            height: 70rpx;
+            justify-content: space-between;
+            .left_btn{
+                height: 100%;
+                width: 150rpx;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 30rpx;
+                >icon{
+                    height: 100%;
+                    font-size: 45rpx;
+                }
+            }
+            .title{
+                font-size: 35rpx;
+                display: flex;
+                align-items: center;
+            }
+            .right_btn{
+                height: 100%;
+                width: 150rpx;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 30rpx;
+                >icon{
+                    height: 100%;
+                    font-size: 55rpx;
+                }
+            }
+        }
+        .myInput_comment{
+            height: 280rpx;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            >textarea{
+                width: 95%;
+                height: 80%;
+                border-radius: 20rpx;
+                background-color: white;
+            }
+        }
+        .myInput_footer{
+            switch{
+                zoom: 0.6;
+                margin-left: 30rpx;
+            }
+        }
+    }
+}
